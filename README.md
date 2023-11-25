@@ -1,6 +1,3 @@
 # schoolwork
-<<<<<<< HEAD
-=======
-# schoolwork
->>>>>>> 89b5a1d (first commit)
-# schoolwork
+<br>
+When I'm too lazy to use google drive.
