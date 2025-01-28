@@ -1,0 +1,74 @@
+{
+    // General editor settings
+    "editor.wordWrap": "on",
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": true,
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    
+    // Markdown settings
+    "markdown.preview.breaks": true,
+    "markdown.preview.fontSize": 16,
+    "markdown.preview.lineHeight": 1.6,
+    "markdown.preview.typographer": true,
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.updateOnSave": true,
+    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "markdown.styles": [],
+    
+    // Math settings
+    "mdmath.delimiters": "dollars",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    
+    // LaTeX settings
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.view.pdf.viewer": "tab",
+    
+    // Spell checker settings
+    "cSpell.enabled": true,
+    "cSpell.language": "en",
+    "cSpell.enableFiletypes": [
+        "markdown",
+        "latex",
+        "tex"
+    ],
+    
+    // Git settings
+    "git.enableSmartCommit": true,
+    "git.autofetch": true,
+    
+    // Additional writing aids
+    "ltex.language": "en-US",
+    "ltex.enabled": true,
+    "ltex.additionalRules.enablePickyRules": true,
+    
+    // File associations
+    "files.associations": {
+        "*.md": "markdown",
+        "*.tex": "latex"
+    }
+}
