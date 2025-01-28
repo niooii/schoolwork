@@ -10,10 +10,7 @@
         
         "goessner.mdmath",
         
-        "streetsidesoftware.code-spell-checker",
         "valentjn.vscode-ltex",
         "hediet.vscode-drawio",
-        
-        "eamodio.gitlens",
     ]
 }

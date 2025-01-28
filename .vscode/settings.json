@@ -1,4 +1,6 @@
 {
+    "vim.disableExtension": true,
+
     // General editor settings
     "editor.wordWrap": "on",
     "editor.lineNumbers": "on",
@@ -15,8 +17,11 @@
     "markdown.preview.typographer": true,
     "markdown.extension.toc.levels": "2..6",
     "markdown.extension.toc.updateOnSave": true,
-    "markdown.extension.preview.autoShowPreviewToSide": true,
+    "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown.styles": [],
+
+    // PDF stuff
+    "pdf-viewer.invert":true,
     
     // Math settings
     "mdmath.delimiters": "dollars",
@@ -30,6 +35,9 @@
             "other": "on"
         }
     },
+
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
     
     // LaTeX settings
     "latex-workshop.latex.autoBuild.run": "onSave",
@@ -47,15 +55,8 @@
         }
     ],
     "latex-workshop.view.pdf.viewer": "tab",
-    
-    // Spell checker settings
-    "cSpell.enabled": true,
-    "cSpell.language": "en",
-    "cSpell.enableFiletypes": [
-        "markdown",
-        "latex",
-        "tex"
-    ],
+    "latex-workshop.view.pdf.invert": 0.9,
+    "latex-workshop.view.pdf.zoom": "page-width",
     
     // Git settings
     "git.enableSmartCommit": true,
@@ -70,5 +71,16 @@
     "files.associations": {
         "*.md": "markdown",
         "*.tex": "latex"
-    }
+    },
+
+    // Window layout things
+    "workbench.editor.enablePreview": false,
+    "window.restoreWindows": "all",
+    "workbench.startupEditor": "none",
+    "window.restoreFullscreen": true,
+    "workbench.editor.openPositioning": "last",
+    "workbench.editor.closeEmptyGroups": false,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.panel.defaultLocation": "right",
+    "window.newWindowDimensions": "inherit"
 }

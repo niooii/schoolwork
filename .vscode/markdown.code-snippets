@@ -1,0 +1,15 @@
+{
+    "Proof Block": {
+        "prefix": "prf",
+        "scope": "markdown",
+        "body": [
+            "<details>",
+            "<summary>Proof.</summary>",
+            "",
+            "$1",
+            "",
+            "</details>"
+        ],
+        "description": "Create an expandable proof section"
+    }
+}
