@@ -1,10 +1,10 @@
 # Homework 1: Prove props 1.7, 1.10
 
 > **Prop 1.7.**
-> $m \in \Z \Rightarrow (0 + m = m) \land (1 * m = m)$.
+> $m \in \mathbb{Z} \Rightarrow (0 + m = m) \land (1 * m = m)$.
 
 Proof.
-Let $m \in \Z$.
+Let $m \in \mathbb{Z}$.
 
 Prove $(0+m=m)$:
 - $0+m=m+0$, by axiom 1.1(i)
@@ -19,12 +19,12 @@ Prove $(1*m=m)$:
 $\therefore 1*m=m$
 
 > **Prop 1.10.**
-> $\forall m, x_1, x_2 \in \Z : (m + x_1 = 0) \land (m + x_2 = 0) \Rightarrow x_1 = x_2$
+> $\forall m, x_1, x_2 \in \mathbb{Z} : (m + x_1 = 0) \land (m + x_2 = 0) \Rightarrow x_1 = x_2$
 
 Proof.
-Let $m,x_1,x_2 \in \Z$.
+Let $m,x_1,x_2 \in \mathbb{Z}$.
 Assume $(m+x_1=0)$ and $(m+x_2=0)$
-$\exists (-m) \in \Z$, by axiom 1.4.
+$\exists (-m) \in \mathbb{Z}$, by axiom 1.4.
 
 For the first eq $(m+x_1=0)$:
 - $(m+x_1)+(-m)=0+(-m)$, by adding $-m$ to both sides

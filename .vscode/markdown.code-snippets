@@ -11,5 +11,30 @@
             "</details>"
         ],
         "description": "Create an expandable proof section"
+    },
+    "Integer Set": {
+        "prefix": "\\Z",
+        "body": "\\mathbb{Z}",
+        "description": "Set of Integers"
+    },
+    "Real Set": {
+        "prefix": "\\R",
+        "body": "\\mathbb{R}",
+        "description": "Set of Real Numbers"
+    },
+    "Rational Set": {
+        "prefix": "\\Q",
+        "body": "\\mathbb{Q}",
+        "description": "Set of Rational Numbers"
+    },
+    "Natural Set": {
+        "prefix": "\\N",
+        "body": "\\mathbb{N}",
+        "description": "Set of Natural Numbers"
+    },
+    "Complex Set": {
+        "prefix": "\\C",
+        "body": "\\mathbb{C}",
+        "description": "Set of Complex Numbers"
     }
 }
