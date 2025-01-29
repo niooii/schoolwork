@@ -1,4 +1,5 @@
 {
+    // disable vim
     "vim.disableExtension": true,
 
     // General editor settings
@@ -20,9 +21,6 @@
     "markdown.extension.preview.autoShowPreviewToSide": false,
     "markdown.styles": [],
 
-    // PDF stuff
-    "pdf-viewer.invert":true,
-    
     // Math settings
     "mdmath.delimiters": "dollars",
     "[markdown]": {
@@ -57,10 +55,6 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.view.pdf.invert": 0.9,
     "latex-workshop.view.pdf.zoom": "page-width",
-    
-    // Git settings
-    "git.enableSmartCommit": true,
-    "git.autofetch": true,
     
     // Additional writing aids
     "ltex.language": "en-US",
