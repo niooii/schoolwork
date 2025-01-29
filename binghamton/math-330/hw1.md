@@ -22,9 +22,9 @@ $\therefore 1*m=m$
 > $\forall m, x_1, x_2 \in \mathbb{Z} : (m + x_1 = 0) \land (m + x_2 = 0) \Rightarrow x_1 = x_2$
 
 Proof.
-Let $m,x_1,x_2 \in \mathbb{Z}$.
-Assume $(m+x_1=0)$ and $(m+x_2=0)$
-$\exists (-m) \in \mathbb{Z}$, by axiom 1.4.
+Let $m,x_1,x_2 \in \mathbb{Z}$.  
+Assume $(m+x_1=0)$ and $(m+x_2=0)$  
+$\exists (-m) \in \mathbb{Z}$, by axiom 1.4.  
 
 For the first eq $(m+x_1=0)$:
 - $(m+x_1)+(-m)=0+(-m)$, by adding $-m$ to both sides
