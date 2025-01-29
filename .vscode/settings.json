@@ -19,7 +19,7 @@
     "markdown.extension.toc.levels": "2..6",
     "markdown.extension.toc.updateOnSave": true,
     "markdown.extension.preview.autoShowPreviewToSide": false,
-    "markdown.styles": ["md.css"],
+    "markdown.styles": [],
 
     // Math settings
     "mdmath.delimiters": "dollars",
@@ -76,5 +76,10 @@
     "workbench.editor.closeEmptyGroups": false,
     "workbench.editor.tabSizing": "shrink",
     "workbench.panel.defaultLocation": "right",
-    "window.newWindowDimensions": "inherit"
+    "window.newWindowDimensions": "inherit",
+
+    // default openers for stuff
+    "workbench.editorAssociations": {
+        "*.pdf": "latex-workshop-pdf-hook"
+    }
 }
