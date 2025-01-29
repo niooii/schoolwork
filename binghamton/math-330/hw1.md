@@ -3,7 +3,7 @@
 > **Prop 1.7.**
 > $m \in \mathbb{Z} \Rightarrow (0 + m = m) \land (1 * m = m)$.
 
-Proof.
+Proof.  
 Let $m \in \mathbb{Z}$.
 
 Prove $(0+m=m)$:
@@ -21,7 +21,7 @@ $\therefore 1*m=m$
 > **Prop 1.10.**
 > $\forall m, x_1, x_2 \in \mathbb{Z} : (m + x_1 = 0) \land (m + x_2 = 0) \Rightarrow x_1 = x_2$
 
-Proof.
+Proof.  
 Let $m,x_1,x_2 \in \mathbb{Z}$.  
 Assume $(m+x_1=0)$ and $(m+x_2=0)$  
 $\exists (-m) \in \mathbb{Z}$, by axiom 1.4.  
