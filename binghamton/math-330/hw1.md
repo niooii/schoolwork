@@ -28,12 +28,14 @@ $\exists (-m) \in \mathbb{Z}$, by axiom 1.4.
 
 For the first eq $(m+x_1=0)$:
 - $(m+x_1)+(-m)=0+(-m)$, by adding $-m$ to both sides
-- $(m+(-m))+x_1=-m$, by axiom 1.1(ii) on the left and prop. 1.7 on the right
+- $(m+(-m))+x_1=0+(-m)$, by axiom 1.1(ii)
+- $(m+(-m))+x_1=-m$, by prop. 1.7
 - $0+x_1=-m$, by axiom 1.4
 - $x_1=-m$, by prop. 1.7
 
-For the second eq $(m+x_2=0)$, following the same reudction steps:
+For the second eq $(m+x_2=0)$, following the same reduction steps:
 - $(m+x_2)+(-m)=0+(-m)$
+- $(m+(-m))+x_2=0+(-m)$
 - $(m+(-m))+x_2=-m$
 - $0+x_2=-m$
 - $x_2=-m$

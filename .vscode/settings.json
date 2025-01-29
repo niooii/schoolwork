@@ -19,7 +19,7 @@
     "markdown.extension.toc.levels": "2..6",
     "markdown.extension.toc.updateOnSave": true,
     "markdown.extension.preview.autoShowPreviewToSide": false,
-    "markdown.styles": [],
+    "markdown.styles": ["md.css"],
 
     // Math settings
     "mdmath.delimiters": "dollars",
