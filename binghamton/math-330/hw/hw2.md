@@ -43,9 +43,12 @@ $m\cdot 0=0\cdot m$, by Axiom 1.1(iv)
 $\therefore m\cdot 0=0=0\cdot m$ by transitivity.  
 
 > **Prop. 1.24**  
-> $(x\in\mathbb{Z})\space x\cdot x=x \Rightarrow x=1 \lor x=2$
+> $(x\in\mathbb{Z})\space x\cdot x=x \Rightarrow x=1 \lor x=0$
 
 Proof.
+Prove $x=1$ may be true.
+- $1\cdot1=1$, by substitution.
+- 
 
 > **Prop. 1.25 (i)**  
 > $\forall m,n\in\mathbb{Z},\space -(m+n)=(-m)+(-n)$ 
