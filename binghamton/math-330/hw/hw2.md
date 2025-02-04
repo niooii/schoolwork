@@ -34,7 +34,7 @@ We know $0+0=0$, from Prop. 1.7.
 
 We know $(m\cdot 0)\in \mathbb{Z}$, due to the closure property of binary operations.
 We know the additive inverse $-(m\cdot 0)\in \mathbb{Z}$, by Axiom 1.4.
-- $(m\cdot 0+m\cdot 0)+(-(m\cdot 0))=m\cdot 0+(-(m\cdot 0))$
+- $(m\cdot 0+m\cdot 0)+(-(m\cdot 0))=m\cdot 0+(-(m\cdot 0))$, by adding $-(m\cdot 0)$ to both sides
 - $m\cdot 0+(m\cdot 0+(-(m\cdot 0)))=m\cdot 0+(-(m\cdot 0))$, by Axiom 1.1(ii)
 - $m\cdot 0+0=0$, by Axiom 1.4
 
