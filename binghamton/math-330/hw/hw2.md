@@ -11,7 +11,7 @@ Let $x\in \mathbb{Z}$, $m\in \mathbb{Z}$.
 
 Finally, $x=0$, by Prop. 1.7. 
 
-> **Prop. 1.13.**
+> **Prop. 1.13.**  
 > $(x\in \mathbb{Z})\space(\exists m\in \mathbb{Z})$ *such that* $m+x=m \Rightarrow x=0$.
 
 Proof.  
@@ -21,7 +21,7 @@ We know $(0\in \mathbb{Z})$ by Axiom 1.2.
 
 Finally, $x=0$, by Prop. 1.7.  
 
-> **Prop. 1.14**
+> **Prop. 1.14**  
 > $(\forall m\in \mathbb{Z}) \space m\cdot 0=0=0\cdot m$
 
 Proof.  
@@ -38,21 +38,21 @@ We know the additive inverse $-(m\cdot 0)\in \mathbb{Z}$, by Axiom 1.4.
 - $m\cdot 0+(m\cdot 0+(-(m\cdot 0)))=m\cdot 0+(-(m\cdot 0))$, by Axiom 1.1(ii)
 - $m\cdot 0+0=0$, by Axiom 1.4
 
-Finally, $m\cdot 0=0$ by Axiom 1.2.
+Finally, $m\cdot 0=0$ by Axiom 1.2.  
 $m\cdot 0=0\cdot m$, by Axiom 1.1(iv)  
 $\therefore m\cdot 0=0=0\cdot m$ by transitivity.  
 
-> **Prop. 1.24**
+> **Prop. 1.24**  
 > $(x\in\mathbb{Z})\space x\cdot x=x \Rightarrow x=1 \lor x=2$
 
 Proof.
 
-> **Prop. 1.25 (i)**
+> **Prop. 1.25 (i)**  
 > $\forall m,n\in\mathbb{Z},\space -(m+n)=(-m)+(-n)$ 
 
 Proof.
 
-> **Prop. 1.26**
+> **Prop. 1.26**  
 > $(m,n\in\mathbb{Z})\space mn=0 \Rightarrow m=0 \lor n=0$
 
 Proof.
