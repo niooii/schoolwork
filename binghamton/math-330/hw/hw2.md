@@ -4,7 +4,7 @@
 > $(x\in \mathbb{Z})\space (m \in \mathbb{Z})\space m+x=m \Rightarrow x=0$
 
 Proof.  
-Let $x\in \mathbb{Z}$, $m\in \mathbb{Z}$.  
+Let $x,m\in \mathbb{Z}$.  
 - $(m+x)+(-m)=m+(-m)$, by adding the additive inverse (-m) to both sides
 - $(m+(-m))+x=m+(-m)$, by Axiom 1.1(ii)
 - $0+x=0$, by Axiom 1.4.
@@ -23,9 +23,9 @@ We know $(0\in \mathbb{Z})$ by Axiom 1.2.
 > $(\forall m\in \mathbb{Z}) \space m\cdot 0=0=0\cdot m$
 
 Proof.  
-Let $m\in\Z$.  
+Let $m\in\mathbb{Z}$.  
 - $m=m$
-- $m\cdot0=m\cdot 0$, by multiplying both sides by $0$.
+- $m\cdot0=m\cdot 0$, by multiplying both sides by $0$
 
 We know $0+0=0$, from Prop. 1.7.  
 - $m\cdot(0+0)=m\cdot 0$, by substitution
