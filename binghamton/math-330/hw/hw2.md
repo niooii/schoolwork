@@ -58,7 +58,7 @@ $\therefore (x=1)\lor(x=0)$ holds true.
 
 Proof.  
 Let $m,n\in\mathbb{Z}$.  
-
+- $-(m+n)=(-m)+(-n)$
 
 > **Prop. 1.26**  
 > $(m,n\in\mathbb{Z})\space mn=0 \Rightarrow m=0 \lor n=0$
