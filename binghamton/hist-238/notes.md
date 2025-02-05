@@ -33,4 +33,7 @@ Several developments converged:
 - Importance of instrumentation
 - Labs as a site of knowledge production.  
 
-Skinned people to learn more about anatomy lol
+Skinned people to learn more about anatomy lol  
+
+**Astronomy**: Geocentrism Heliocentrism etc
+- Nicolaus Copernicus (1473-1543): Heliocentrism
