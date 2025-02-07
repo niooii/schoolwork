@@ -58,7 +58,19 @@ $\therefore (x=1)\lor(x=0)$ holds true.
 
 Proof.  
 Let $m,n\in\mathbb{Z}$.  
-- $-(m+n)=(-m)+(-n)$
+$-(m+n)$ is an additive inverse of $(m+n)$, by Axiom 1.4.
+Prove $(-m)+(-n)$ is an additive inverse of $(m+n)$.  
+- $(m+n)+((-m)+(-n))$
+- $((m+n) + (-m)) + (-n)$, by associativity of addition
+- $((m+(-m)) + n) + (-n)$, by associativity of addition
+- $(m+(-m))+(n+(-n))$, by associativity of addition
+- $0+0$, by the axiom of additive inverses.
+- Finally, we reduce to $0$, by prop. 1.7.
+
+$\therefore\space (-m)+(-n)$ is an additive inverse of $(m+n)$.  
+$(m+n)+((-m)+(-n))=0$ and $(m+n)+(-(m+n))=0$ are true.  
+By prop. 1.9, $(-m)+(-n)=-(m+n)$.
+
 
 > **Prop. 1.26**  
 > $(m,n\in\mathbb{Z})\space mn=0 \Rightarrow m=0 \lor n=0$
