@@ -2,6 +2,9 @@
 > **Prop. 2.3.**  
 > $1\in\mathbb{N}$
 
+Proof.  
+Assume $1\notin\mathbb{N}$. By prop. 2.2, and the fact that $1\neq 0$, we know $-1\in\mathbb{N}$.
+
 > **Prop. 2.5.**  
 > For each $n\in\mathbb{N}$ there exists $m\in\mathbb{N}$ such that $m\gt n$
 
