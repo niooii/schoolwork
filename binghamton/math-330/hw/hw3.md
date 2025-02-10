@@ -22,15 +22,12 @@ Proof.
 Assume $m\neq n$.
 From the definition of $m\leq n$, we know $m<n$ or $m=n$, but $m=n$ has been assumed false.  
 We know $n-m\in\mathbb{N}$, by definition of $m<n$.
-From $m\leq n \leq m$, we know:  
-$n-m\in\mathbb{N}$  
-and  
-$m-n\in\mathbb{N}$  
+From $m\leq n \leq m$, we know $n-m\in\mathbb{N}$ and $m-n\in\mathbb{N}$  
 By Axiom 2.1(i),  
 $(n-m)+(m-n)\in\mathbb{N}$  
-$(n-n)+(-m+n)\in\mathbb{N}$  
-$0+0\in\mathbb{N}$  
-Finally, $0\in\mathbb{N}$.  
+$\Rightarrow(n-n)+(-m+n)\in\mathbb{N}$  
+$\Rightarrow0+0\in\mathbb{N}$  
+$\Rightarrow0\in\mathbb{N}$.  
 However, by Axiom 2.1(iii), $0\notin\mathbb{N}$.  
 Assuming the law of excluded middle, by contradiction, $m=n$.
 
