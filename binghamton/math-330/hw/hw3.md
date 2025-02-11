@@ -12,8 +12,14 @@ Therefore, $1\in\mathbb{N}$, because $1\neq 0$ and $-1 \notin \mathbb{N}$.
 > For each $n\in\mathbb{N}$ there exists $m\in\mathbb{N}$ such that $m\gt n$
 
 Proof.  
-From the definition of $m>n$, we know $m-n\in\mathbb{N}$, or $m+(-n)\in\mathbb{N}$.  
-UNFINISHED
+Let $m=(n+1)$. $(n+1)\in\mathbb{N}$ due to $\mathbb{N}$ being closed under addition, and $1\in\mathbb{N}$ by prop 2.3.  
+$(n+1)>n$ is true, because $(n+1)-n\in\mathbb{N}$. Proof:  
+
+$(n+1)-n$  
+$\Rightarrow(n-n)+1$  
+$\Rightarrow1$, and $1\in\mathbb{N}$ from prop 2.3.  
+Therefore for each $n\in\mathbb{N}$ we can always construct a number $m=(n+1)\in\mathbb{N}$, where $m>n$.  
+
 
 > **Prop. 2.6.**  
 > $(m,n\in\mathbb{Z})\space m\leq n\leq m \Rightarrow m=n$
