@@ -29,12 +29,24 @@ $\Rightarrow(n-n)+(-m+n)\in\mathbb{N}$
 $\Rightarrow0+0\in\mathbb{N}$  
 $\Rightarrow0\in\mathbb{N}$.  
 However, by Axiom 2.1(iii), $0\notin\mathbb{N}$.  
-Assuming the law of excluded middle, by contradiction, $m=n$.
+By contradiction, $m=n$.
 
 > **Prop. 2.8.**  
 > $(m,n\in\mathbb{Z})$ Exactly one of the following is true: $m<n$, $m=n$, $m>n$
 
 Proof.  
-First prove $m<n$ and $m>n$ cannot both be true.  
-UNFINISHED
+Prop. 2.2. states that for $m\in\mathbb{Z}$, one and only one of the following is true:  
+$$m\in\mathbb{N}, \space m=0, \space-m\in\mathbb{N}$$  
+Note the implications of the following relationships:  
+- $m<n\Rightarrow (n-m)\in\mathbb{N}$
+- $m=n\Rightarrow (n-m)=0$
+- $m>n\Rightarrow (m-n)\in\mathbb{N}$, or rewritten, $-(n-m)\in\mathbb{N}$
+
+Now, let $k=(n-m)$. We can rewrite the relationships as follows:  
+- $m<n\Rightarrow k\in\mathbb{N}$
+- $m=n\Rightarrow k=0$
+- $m>n\Rightarrow -k\in\mathbb{N}$
+
+Since proposition 2.2 states one and only one of $m\in\mathbb{N}, \space m=0, \space-m\in\mathbb{N}$ is true,  
+then one and only one of the original relationships must be true.  
 
