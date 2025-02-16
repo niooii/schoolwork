@@ -16,10 +16,13 @@ Let $x,m\in \mathbb{Z}$.
 > Let $x\in \mathbb{Z}$. If $x$ has the property that there exists an $m\in \mathbb{Z}$ *such that* $m+x=m$, then $x=0$.
 
 Proof.  
-Let $x\in \mathbb{Z}$, $m=0$.  
-We know $(0\in \mathbb{Z})$ by Axiom 1.2.  
-- $0+x=0$, by substitution
-- Finally, $x=0$, by Prop. 1.7.  
+Let $x,m\in \mathbb{Z}$.  
+- $(m+x)+(-m)=m+(-m)$, by adding the additive inverse (-m) to both sides
+- $m+(x+(-m))=m+(-m)$, by associativity of addition
+- $m+((-m)+x)=m+(-m)$, by commutativity of addition
+- $(m+(-m))+x=m+(-m)$, by associativity of addition
+- $0+x=0$, by Axiom 1.4.
+- Finally, $x=0$, by Prop. 1.7. 
 
 > **Prop. 1.14**  
 > $(\forall m\in \mathbb{Z}) \space m\cdot 0=0=0\cdot m$
