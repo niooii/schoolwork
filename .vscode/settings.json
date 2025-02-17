@@ -81,5 +81,6 @@
     // default openers for stuff
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
-    }
+    },
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css"
 }
