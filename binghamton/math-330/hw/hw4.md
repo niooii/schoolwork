@@ -1,40 +1,32 @@
 # Prove Prop. 2.18(ii) by induction. (F 2/14)
 
 > **Prop. 2.18(ii).**  
-> $\forall k\in\mathbb{N}, \space k^3+5k$ is divisible by 6.
+> $\forall k\in\mathbb{N}, \space k^4-6k^3+11k^2-6k$ is divisible by $4$.
 
 Proof.  
-$m$ is divisible by $n$ if there exists an $j\in\mathbb{Z}$ such that $m=jn$.  
+Definition of divisibility:  
+$m$ is divisible by $n$ if there exists a $j\in\mathbb{Z}$ such that $m=jn$.  
 
-$P(k)=k^3+5k$ is divisible by 6.  
+Let $P(k)$ be the statement: There exists a $z\in\mathbb{Z}$ such that $k^4-6k^3+11k^2-6k=4z$.  
 
 Prove $P(1)$.  
-$(1)^3+5(1)=1+5=6$.  
-$6$ is divisible by $6$, therefore $P(1)$ is true.  
+$1^4-6(1)^3+11(1)^2-6(1)=4z$.  
+The left-hand side can be rewritten as:  
+$1-6+11-6=0$  
+To obtain:  
+$0=4z$.  We can set $z=0$, therefore $P(1)$ is true.  
 
-Assume $P(k)$ is true for some $k\in\mathbb{N}$:  
-There exists a $n\in\mathbb{Z}$ such that $k^3+5k=6n$  
+Induction step:  
+Assume $P(k)$ is true. That is, there exists a $z\in\mathbb{Z}$ such that $k^4-6k^3+11k^2-6k=4z$.  
 
 Prove $P(k+1)$.  
-Show there exists a $m\in\mathbb{Z}$ where $(k+1)^3+5(k+1)=6n$.  
-We rewrite the left-hand side:  
-$(k+1)^3+5(k+1)$
-$=k^3+3k^2+3k+1+5k+5$   
-$=(k^3+5k)+3k^2+3k+6$  
-$=6n+3k^2+3k+6$  
-$=6n+3(k^2+k)+6$  
+Prove there exists a $z\in\mathbb{Z}$ such that $(k+1)^4-6(k+1)^3+11(k+1)^2-6(k+1)=4z$.  
+$(k+1)^4=k^4+4k^3+6k^2+4k+1$
+$(k+1)^3=k^3+3k^2+3k+1$
+$(k+1)^2=k^2+2k+1$
 
-We now prove that $3(k^2+k)$ is divisible by 6.  
-Intermediate proposition: If $n\in\mathbb{Z}$ is divisible by $2$, then $3n$ is divisible by $6$.  
-Proof.  
-If $n\in\mathbb{Z}$ is divisible by $2$, then there exists a $l\in\mathbb{Z}$ where $n=2l$.  
-We multiply both sides by $3$ to obtain $3n=6l$, and since this follows the definition of divisibility, $3n$ is divisible by $6$.  
-Therefore, $3(k^2+k)$ is divisible by $6$, that is, there exists a $d\in\mathbb{Z}$ where $6d=3(k^2+k)$.  
-
-We now rewrite the left-hand side as:  
-$6n+6d+6=6(n+d+1)$
-
-We let $q=(n+d+1)\in\mathbb{Z}$.  
-$(k+1)^3+5(k+1)=6q$ where $q\in\mathbb{Z}$, therefore $P(k+1)$ is true.  
-
-Prop 2.18 proved by mathematical induction.  
+The left-hand side can be rewritten as:  
+$$(k^4+4k^3+6k^2+4k+1)-6(k^3+3k^2+3k+1)+11(k^2+2k+1)-6(k+1) \newline 
+= k^4+4k^3+6k^2+4k+1-6k^3-18k^2-18k-6+11k^2+22k+11-6k-6 \newline
+= k^4-2k^3+k^2+2k+1-6+11-6 \newline
+= k^4-2k^3+k^2+2k$$
