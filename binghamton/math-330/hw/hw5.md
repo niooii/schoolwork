@@ -3,10 +3,10 @@
 > **Prop. 2.10.**  
 > The equation $x^2=-1$ has no solution in $\mathbb{Z}$.  
 
-> **Prop. 2.21.**
+> **Prop. 2.21.**  
 > There exists no integer $x$ such that $0<x<1$.  
 
-> **Prop. 2.33.**
+> **Prop. 2.33.**  
 > Let $A \subseteq \mathbb{Z}, A\neq\emptyset$.  Let $b\in\mathbb{Z}$ such that $(\forall a \in A) \space b \leq a$.  Then $A$ has a smallest element.  
 
 > **Project 2.28.**  
@@ -56,11 +56,11 @@ Prop 2.18(iii) proved by mathematical induction.
 
 ### Let $n\in\mathbb{N}$ for the following propositions.  
 
-> **Prop 2.18.1(i)**  
+> **Prop 2.18.1(i).**  
 > $1+2+3+...+n = n(n+1)/2$  
 
 
-> **Prop 2.18.1(ii)**  
+> **Prop 2.18.1(ii).**  
 > $2 \space | \space n(n+1)$  
 
 Proof.  
