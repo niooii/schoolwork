@@ -64,10 +64,16 @@ Therefore, assumption $A$ is false by contradiction. That is, there *does not* e
 > **Prop. 2.33.**  
 > Let $A \subseteq \mathbb{Z}, A\neq\emptyset$. Let $b\in\mathbb{Z}$ such that $(\forall a \in A) \space b \leq a$.  Then $A$ has a smallest element.  
 
+The well-ordering principle states that every non-empty subset of $\mathbb{N}$ has a smallest element.  
+uh...  
+`UNFINISHED`
+
 > **Project 2.28.**  
 > Determine for which natural numbers $k^2-3k\geq 4$. Prove it.  
 
-
+Reduce the original expression:  
+$k(k-3)\geq 4$  
+`UNFINISHED`
 
 > **Prop. 2.18(iii).**  
 > $\forall k\in\mathbb{N}, \space k^3+5k$ is divisible by 6.
