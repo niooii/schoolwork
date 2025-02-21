@@ -111,14 +111,41 @@ Prop 2.18(iii) proved by mathematical induction.
 ### Let $n\in\mathbb{N}$ for the following propositions.  
 
 > **Prop 2.18.1(i).**  
-> $1+2+3+...+n = n(n+1)/2$  
+> $\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$  
 
- 
+Proof.  
+Let $P(n)$ be the statement:  
+$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$  
+
+Prove $P(1)$.  
+- $\sum_{i=1}^{1} i = \frac{1(1+1)}{2}$  
+- $1 = \frac{1(2)}{2}$  
+- $1=1$  
+
+Therefore $P(1)$ is true.  
+
+Induction step.  
+Assume $P(n)$ is true.  
+
+Prove $P(n+1)$.  
+- $\sum_{i=1}^{n+1} i = \frac{(n+1)((n+1)+1)}{2}$  
+- $\sum_{i=1}^{n} i + (n+1) = \frac{(n+1)(n+2)}{2}$  
+- $\frac{n(n+1)}{2} + (n+1) = \frac{(n+1)(n+2)}{2}$  
+- $n(n+1) + 2(n+1) = (n+1)(n+2)$  
+- $n^2+n + 2n+2 = n^2+2n+n+2$  
+- $n^2+3n+2 = n^2+3n+2$  
+
+Therefore $P(n+1)$ is true.  
+
+$\sum_{i=1}^{n} i = \frac{n(n+1)}{2}$ by mathematical induction.  
 
 > **Prop 2.18.1(ii).**  
 > $2 \space | \space n(n+1)$  
 
 Proof.  
-We can derive this directly from Prop. 2.18.1(i):  
-something something
+We rewrite the proposition:  
+There exists $z\in\mathbb{Z}$ where $n(n+1)=2z$
 
+By **proposition 2.18.1(i)**, $\frac{n(n+1)}{2}\in\mathbb{N}$ because the sum of natural numbers is in $\mathbb{N}$.   
+If we let $z=\frac{n(n+1)}{2}$, then multiplying both sides by $2$ results in $2z=n(n+1)$.  
+Since there exists a $z\in\mathbb{Z}$ where $n(n+1)=2z$, $n(n+1)$ is divisible by 2.  
