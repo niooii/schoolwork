@@ -26,18 +26,43 @@ By contradiction, there cannot exist a $m\in\mathbb{Z}$ where $m^2=-1$.
 > There exists no integer $x$ such that $0<x<1$.  
 
 Proof.  
-Let $x\in\mathbb{Z}$.  
-Assume there exists an $x$ where $0<x<1$.  
+Let $k\in\mathbb{Z}$.  
+Assume there *does* exist an $k$ where $0<k<1$.  
 We rewrite the assumption as follows:  
-There exists an $x$ where $0<x$ and $x<1$  
-$\Rightarrow$ There exists an $x$ where $(x-0)\in\mathbb{N}$ and $(1-x)\in\mathbb{N}$.  
-$\Rightarrow$ There exists an $x$ where $x\in\mathbb{N}$ and $(1-x)\in\mathbb{N}$.  
+There exists an $k$ where $0<k$ and $k<1$  
+$\Rightarrow$ There exists an $k$ where $(k-0)\in\mathbb{N}$ and $(1-k)\in\mathbb{N}$  
+$\Rightarrow$ There exists an $k$ where $k\in\mathbb{N}$ and $(1-k)\in\mathbb{N}$.  
 
+Let $A$ be the assumption (for which we will be proving by contradiction):  
+There exists an $k$ where $k\in\mathbb{N}$ and $(1-k)\in\mathbb{N}$.  
+
+In order to prove assumption $A$ is false, we can prove that there is *no* $k\in\mathbb{N}$ where $(1-k)\in\mathbb{N}$.  
+For this, we use induction - let $P(n)$ be the statement:  
+$(1-n)\notin\mathbb{N}$.  
+
+Prove $P(1)$.  
+- $(1-1)\notin\mathbb{N}$
+- $0\notin\mathbb{N}$
+
+$0\notin\mathbb{N}$ is true, by Axiom 2.1(iii).  
+
+Induction step.  
+We assume $P(n)$ is true:  
+$(1-k)\notin\mathbb{N}$.  
+
+Prove $P(n+1)$.  
+- $(1-(n+1))\notin\mathbb{N}$
+- $(1-n-1)\notin\mathbb{N}$
+- $(-n)\notin\mathbb{N}$
+
+$(-n)\notin\mathbb{N}$ is true, because $n\in\mathbb{N}$ by the induction axiom, and by **proposition 2.2**, if $n\in\mathbb{N}$, then $(-n)\notin\mathbb{N}$.  
+
+Therefore, since for all $k\in\mathbb{N}$, $(1-k)\notin\mathbb{N}$, and since the contrapositive of a true statement holds, there exists no $k\in\mathbb{N}$ where $(1-k)\in\mathbb{N}$.  
+
+Therefore, assumption $A$ is false by contradiction. That is, there *does not* exist a $k$ where $k\in\mathbb{N}$ and $(1-k)\in\mathbb{N}$, so there cannot be an $x\in\mathbb{Z}$ where $0<x<1$.  
 
 > **Prop. 2.33.**  
-> Let $A \subseteq \mathbb{Z}, A\neq\emptyset$.  Let $b\in\mathbb{Z}$ such that $(\forall a \in A) \space b \leq a$.  Then $A$ has a smallest element.  
-
-
+> Let $A \subseteq \mathbb{Z}, A\neq\emptyset$. Let $b\in\mathbb{Z}$ such that $(\forall a \in A) \space b \leq a$.  Then $A$ has a smallest element.  
 
 > **Project 2.28.**  
 > Determine for which natural numbers $k^2-3k\geq 4$. Prove it.  
@@ -88,7 +113,7 @@ Prop 2.18(iii) proved by mathematical induction.
 > **Prop 2.18.1(i).**  
 > $1+2+3+...+n = n(n+1)/2$  
 
-
+ 
 
 > **Prop 2.18.1(ii).**  
 > $2 \space | \space n(n+1)$  
