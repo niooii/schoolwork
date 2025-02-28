@@ -79,10 +79,10 @@ $d)$ Consider the statement "No apples are pears." Formulate it as an implicatio
 
 Proof.  
 Let $S = \set{s | s \text{ is a species}}$  
-Let $A_g=\set{s \in S | s \text{ belongs to genus Malus}}$.  
-Let $P_g=\set{s \in S| s \text{ belongs to genus Pyrus}}$.  
+Let $A_g=\set{s \in S | s \text{ is of the genus Malus}}$.  
+Let $P_g=\set{s \in S| s \text{ is of the genus Pyrus}}$.  
 
-By definition of the taxonimic category genus, $A_g$ and $P_g$ are disjoint.  
+By definition of the taxonimic category 'genus', $A_g$ and $P_g$ are disjoint.  
 
 Let $\text{F}=\set{f | f \text{ is a fruit}}$, and a function $s: \text{F} \rightarrow \text{S}$ mapping a fruit to it's species.    
 
