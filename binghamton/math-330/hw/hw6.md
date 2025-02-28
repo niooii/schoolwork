@@ -10,7 +10,7 @@ $=2$
 > Construct two more mathematical if-then statements that are true, but whose converses are false.  
 
 $1)$ If $f$ is differentiable, then $f$ is continuous.  
-$2)$ If $f$ is a contravariant functor, then $f$ is a functor.   
+$2)$ If $f$ is bijective, then $f$ is surjective.   
 
 > **Project 3.7.**  
 > Negate the following statements.  
