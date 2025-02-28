@@ -112,20 +112,60 @@ $e)$ Compare the implications of parts c and d. Are they different? Why, or why 
 They are different. One is true and one is not. For part c, all the variants of the implication of false, but for part d, the implication and the contrapositive is true, and the inverse and the converse is false.  
 
 > **Prop. 2.23.**  
-> Let $m,n\in\mathbb{N}$. If $n$ is divisible $m$ then $m\leq n$.  
+> Let $m,n\in\mathbb{N}$. If $n$ is divisible by $m$ then $m\leq n$.  
 
 Proof.  
 
 Let $m,n\in\mathbb{N}$.  
-
 $n$ is divisible by $m$ $\iff (\exists z \in \mathbb{Z})\space mz=n$  
+
+The proposition can be rewritten as: 
+If $(\exists z \in \mathbb{Z})\space mz=n$, then $m\leq n$.  
+
+Proof that $z\in\mathbb{N}$.  
+By proposition 2.2, we know one and only one of the following is true for $z\in\mathbb{Z}$:  
+$z\in\mathbb{N}, z=0, -z\in\mathbb{N}$.  
+Assume $z=0$. That means $m\cdot0=n$, so $n=0$. However, we know $n\in\mathbb{N}$, so $n\neq0$. By contradiction, $z\neq0$.  
+`// Comment: Do i have to expand more on this part below?`
+Assume $-z\in\mathbb{N}$. Since $m\in\mathbb{N}$, this means $mz=n<0$. However, $n\geq 1$ by proposition 2.20. By contradiction, $-z\notin\mathbb{N}$.  
+Therefore $z\in\mathbb{N}$.  
+
+We rewrite the proposition again:  
+If $(\exists z \in \mathbb{N})\space mz=n$, then $m \leq n$.  
+
+Proposition 2.12(iv) states if $m ≤ n$ and $0 ≤ p$ then $mp ≤ np$.  
+$0\leq m$ because $m\in\mathbb{N}$.  
+By proposition 2.20, since $z\in\mathbb{N}$, $1\leq z$.  
+Using proposition 2.12(iv), $1m\leq zm$. We know $mz=n$, so by substituting $n$ for $mz$:  
+$1m\leq n$, or $m\leq n$.  
+
+$\therefore$ if $n$ is divisible by $m$ then $m\leq n$.  
 
 ### Let $n\in\mathbb{N}$ for the following propositions.  
 
 > **Prop. 2.18.1(iii).**  
 > The sum $1^2+2^2+3^2+...+n^2=\frac{n(n+1)(2n+1)}{6}$.  
 
+Proof.  
 
+Let $P(n)$ be the proposition: $1^2+2^2+3^2+...+n^2=\frac{n(n+1)(2n+1)}{6}$.  
+
+Prove $P(1)$.  
+$1=\frac{1(1+1)(2(1)+1)}{6}$  
+$1=\frac{(2)(3)}{6}$  
+$1=1$  
+
+Prove $P(n) \implies P(n+1)$.  
+$1^2+2^2+3^2+...+n^2+(n+1)^2=\frac{(n+1)(n+2)(2n+3)}{6}$  
+$\frac{n(n+1)(2n+1)}{6}+(n+1)^2=\frac{(n+1)(n+2)(2n+3)}{6}$  
+$n(n+1)(2n+1)+6(n^2+2n+1)=(n+1)(n+2)(2n+3)$  
+$2n^3+3n^2+n+6(n^2+2n+1)=(n^2+3n+2)(2n+3)$  
+$2n^3+3n^2+n+6n^2+12n+6=2n^3+9n^2+13n+6$  
+$2n^3+9n^2+13n+6=2n^3+9n^2+13n+6$  
+
+Therefore, $P(n) \implies P(n+1)$.  
+
+$\therefore P(n)$ is true by mathematical induction.  
 
 > **Prop. 2.18.1(iii).**  
 > $6 \space | \space n(n+1)(2n+1)$
@@ -134,6 +174,3 @@ We know that $\frac{n(n+1)(2n+1)}{6}\in\mathbb{Z}$, because the sum of natural n
 Let $z=\frac{n(n+1)(2n+1)}{6}\in\mathbb{Z}$.  Multiplying both sides by $6$:  
 $6z=n(n+1)(2n+1)$, where $z\in\mathbb{Z}$.  
 $\therefore n(n+1)(2n+1)$ is divisible by $6$.  
-
-p;
-*(p + 0x20)= 2;
