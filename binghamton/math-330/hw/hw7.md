@@ -98,12 +98,15 @@ Determine which of the following statements are true for all sets $A$, $B$, and 
  
 Only $C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$ is true.  
 ***Proof.***  
-Let $x\in C$. Since $C\subseteq A \iff (x\in C \implies x\in A)$, $x\in A$.  By definition, $A\cup B=\set{x:x\in A \text{ or } x\in B}$.  
-Since $x\in A \text{ or } x\in B$ is always true if $x\in A$, therefore all elements of $A$ must be in $A\cup B$, that is, $A\subseteq (A\cup B)$.  
+Let $x\in C$. Since $C\subseteq A \iff (x\in C \implies x\in A)$, $x\in A$.   
+By definition, $A\cup B=\set{x:x\in A \text{ or } x\in B}$.  
+Since $x\in A \text{ or } x\in B$ is always true if $x\in A$, all elements of $A$ must be in $A\cup B$, that is, $A\subseteq (A\cup B)$.  
+Additionally, since $x\in A \text{ or } x\in B$ is always true if $x\in B$, $B\subseteq (A\cup B)$ (this will be used later).  
 Since $x\in A$ and $A\subseteq (A\cup B)$, $x\in (A\cup B)$.  
-$\therefore C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$ is true.  
+We have shown $x\in C \implies x\in (A\cup B)$, and this is precisely the definition of $C\subseteq (A\cup B)$.    
+$\therefore C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$.  
 
-We now prove  $C \subseteq (A \cup B) \implies C \subseteq A$ and $C \subseteq B$ is false, by a counterexample.  
+Now, we disprove  $C \subseteq (A \cup B) \implies C \subseteq A$ and $C \subseteq B$, by a counterexample.  
 We define the following sets:  
 $A:=\set{1,2,3}$  
 $B:=\set{4,5}$  
@@ -114,6 +117,27 @@ $C=\set{2,3,4}$ is not a subset of $A=\set{1,2,3}$, which means $(C \subseteq A$
 ***QED.***
 
 (ii) $C \subseteq A$ or $C \subseteq B \iff C \subseteq (A \cup B)$.  
+
+Only $C \subseteq A$ or $C \subseteq B \implies C \subseteq (A \cup B)$ is true.  
+***Proof.***  
+Let $x\in C$. It is sufficient to prove two cases: when $C\subseteq A$ and when $C\subseteq B$.  
+Let $C\subseteq A$. Since $x\in C$, $x\in A$. We know from previous results that $A\subseteq (A\cup B)$. Since $x\in A$, $x\in (A\cup B)$.  
+Now, let $C\subseteq B$.  Since $x\in C$, $x\in B$. From previous results, $B\subseteq (A\cup B)$.  Since $x\in B$, $x\in (A\cup B)$.  
+We have shown that when $C\subseteq A$, $x\in C \implies x\in (A\cup B)$.  
+We have also shown that when $C\subseteq B$, $x\in C \implies x\in (A\cup B)$.  
+Note that these implications are the same, so if $C\subseteq A$ or $C\subseteq B$, $x\in C \implies x\in (A\cup B)$, or rewritten, $C\subseteq (A\cup B)$.  
+$\therefore C \subseteq A$ or $C \subseteq B \implies C \subseteq (A \cup B)$.  
+
+Now, we disprove $C \subseteq (A \cup B) \implies C \subseteq A$ or $C \subseteq B$, by a counterexample.  
+We define the same sets as before:  
+$A:=\set{1,2,3}$  
+$B:=\set{4,5}$  
+
+$(A\cup B) = \set{1,2,3,4,5}$  
+Define the set $C:=\set{2,3,4}$, where $C\subseteq (A\cup B)$.  
+
+$C\subseteq A$ is false, and $C\subseteq B$ is false, which means $(C\subseteq A$ or $C\subseteq B)$ is false.    
+***QED.***  
 
 > **Project 5.16**  
 

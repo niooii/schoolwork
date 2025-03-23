@@ -1,7 +1,15 @@
+
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Scanner;
 
-public class Tweet {
+class ParseException extends RuntimeException {
+    public ParseException(String message) {
+        super(message);
+    }
+}
+
+class Tweet {
     String type, details, location;
     float lat, lng;
 
@@ -34,5 +42,30 @@ public class Tweet {
     @Override
     public String toString() {
         return String.format("Type:      %s \nDetails:   %s \nLocation:  %s \nLatitude:  %f \nLongitude: %f\n", type, details, location, lng, lat);
+    }
+}
+
+
+public class ParseTheTweet {
+    public static void main(String[] args) {
+        String test = "#typ STRUCTURE; #det damaged and stuff; #loc washington; #lat 353.2424; #lng 90.3434;";
+        Tweet ttest = new Tweet(test);
+        System.out.println(ttest);
+
+        System.out.println("test case done");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a tweet below");
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine().trim();
+            try {
+                Tweet t = new Tweet(line);
+                System.out.println(t);
+            } catch (Exception e) {
+                System.out.println("Error parsing tweet: " + e.getMessage());
+            } finally {
+                System.out.println("Enter a tweet below");
+            }
+        }
     }
 }
