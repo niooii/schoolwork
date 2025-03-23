@@ -92,25 +92,42 @@ The sets have the same definition and use the same constant $m$, so they are the
 
 > **Project 5.12.**  
 
-Determine which of the following statements are true for all sets $A$, $B$, and $C$. If a double implication fails, determine whether one or the other of the possible implications holds. If a statement is true, prove it. If it is false, provide a counterexample.
+Determine which of the following statements are true for all sets $A$, $B$, and $C$. If a double implication fails, determine whether one or the other of the possible implications holds. If a statement is true, prove it. If it is false, provide a counterexample.  
 
-(i) $C \subseteq A$ and $C \subseteq B \iff C \subseteq (A \cup B)$.
+(i) $C \subseteq A$ and $C \subseteq B \iff C \subseteq (A \cup B)$.  
+ 
+Only $C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$ is true.  
+***Proof.***  
+Let $x\in C$. Since $C\subseteq A \iff (x\in C \implies x\in A)$, $x\in A$.  By definition, $A\cup B=\set{x:x\in A \text{ or } x\in B}$.  
+Since $x\in A \text{ or } x\in B$ is always true if $x\in A$, therefore all elements of $A$ must be in $A\cup B$, that is, $A\subseteq (A\cup B)$.  
+Since $x\in A$ and $A\subseteq (A\cup B)$, $x\in (A\cup B)$.  
+$\therefore C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$ is true.  
 
-(ii) $C \subseteq A$ or $C \subseteq B \iff C \subseteq (A \cup B)$.
+We now prove  $C \subseteq (A \cup B) \implies C \subseteq A$ and $C \subseteq B$ is false, by a counterexample.  
+We define the following sets:  
+$A:=\set{1,2,3}$  
+$B:=\set{4,5}$  
+
+$(A\cup B) = \set{1,2,3,4,5}$  
+Define the set $C:=\set{2,3,4}$, where $C\subseteq (A\cup B)$.  
+$C=\set{2,3,4}$ is not a subset of $A=\set{1,2,3}$, which means $(C \subseteq A$ and $C \subseteq B)$ is false.  
+***QED.***
+
+(ii) $C \subseteq A$ or $C \subseteq B \iff C \subseteq (A \cup B)$.  
 
 > **Project 5.16**  
 
-Someone tells you that the following equalities are true for all sets $A$, $B$, $C$. In each case, either prove the claim or provide a counterexample.
+Someone tells you that the following equalities are true for all sets $A$, $B$, $C$. In each case, either prove the claim or provide a counterexample.  
 
-(ii) $A \cap (B - C) = (A \cap B) - (A \cap C)$.
+(ii) $A \cap (B - C) = (A \cap B) - (A \cap C)$.  
 
-> **Project 5.21**
+> **Project 5.21**  
 
-Let $A$, $B$, $C$, $D$ be sets. Decide whether each of the following statements is true or false; in each case prove the statement or give a counterexample.
+Let $A$, $B$, $C$, $D$ be sets. Decide whether each of the following statements is true or false; in each case prove the statement or give a counterexample.  
 
-(i) $(A \times B) \cup (C \times D) = (A \cup C) \times (B \cup D)$.
+(i) $(A \times B) \cup (C \times D) = (A \cup C) \times (B \cup D)$.  
 
-> **Functions: 5.4A(a)**  
+> **Functions: 5.4A(a)**   
 
 A function $g:X\rightarrow Y$ is defined as follows:  
 
