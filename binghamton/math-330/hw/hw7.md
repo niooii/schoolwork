@@ -244,3 +244,5 @@ x_n + 1 & \text{otherwise.}
 \end{cases}$  
 
 Does this sequence eventually take on the value $1$, no matter what $m \in \mathbb{N}$ one chooses as the starting point? Try to prove your assertion.  
+
+Uhh...
