@@ -5,10 +5,10 @@
 Determine which of the following set equalities are true. If a statement is true, prove it. If it is false, explain why this set equality does not hold.
 
 Definition of set equality:
-$$A=B \iff A\subseteq B \text{ and } B\subseteq A$$
+$$A=B \iff A\subseteq B \land B\subseteq A$$
 
 (i) $D = E$, where  
-$D := \{3x : x \in \mathbb{N} \text{ and } x > 7\}$  
+$D := \{3x : x \in \mathbb{N} \land x > 7\}$  
 $E := \{y : y \in \mathbb{N}\}$  
 
 This statement is false.
@@ -22,7 +22,7 @@ We see $1\in E$, but $1\notin D$. Therefore, $E\subseteq D$ is false, and conseq
 ***QED*.**
 
 (iii) $D = B$, where  
-$D := \{3x : x \in \mathbb{N} \text{ and } x > 7\}$  
+$D := \{3x : x \in \mathbb{N} \land x > 7\}$  
 $B := \{3y + 21 : y \in \mathbb{N}\}$  
 
 These sets are equal.  
@@ -52,7 +52,7 @@ Since $D\subseteq B$ and $B \subseteq D$, then $B=D$.
 
 (ii) $C = G$, where  
 $C := \{x + 7 : x \in \mathbb{N}\}$  
-$G := \{y : y \in \mathbb{N} \text{ and } y > 7\}$  
+$G := \{y : y \in \mathbb{N} \land y > 7\}$  
 
 These sets are equal.  
 ***Proof.***  
@@ -145,15 +145,43 @@ Someone tells you that the following equalities are true for all sets $A$, $B$, 
 
 (ii) $A \cap (B - C) = (A \cap B) - (A \cap C)$.  
 
+We rewrite the equality statement as follows:  
+$A \cap \set{x : x\in B \land x\notin C} = \set{y : y \in A \land y \in B} - \set{y : y \in A \land y\in C}$   
+$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : (y \in A \land y \in B) \land \lnot (y \in A \land y\in C)}$  
+$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : (y \in A \land y \in B) \land (y \notin A \lor y\notin C)}$  
+For the definition on the right side, we know $y\in A$. Therefore, $y\notin A$ is always false.  
+$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : (y \in A \land y \in B) \land y\notin C}$  
+$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : y \in A \land y \in B \land y\notin C}$  
+These are exactly the same definitions. Therefore, the equality holds.  
+
 > **Project 5.21**  
 
 Let $A$, $B$, $C$, $D$ be sets. Decide whether each of the following statements is true or false; in each case prove the statement or give a counterexample.  
 
 (i) $(A \times B) \cup (C \times D) = (A \cup C) \times (B \cup D)$.  
 
+(1,3) (2,3) (1,4) (2,4)
+
+This statement is false. We prove this with a counterexample:  
+Define the following sets:  
+$A:=\set{1}$  
+$B:=\set{2}$  
+$C:=\set{3}$  
+$D:=\set{4}$  
+
+$A \times B = \set{(1,2)}$
+$C \times D = \set{(3,4)}$
+$(A \times B) \cup (C \times D) = \set{(1,2), (3,4)}$  
+
+$A \cup C = \set{1,3}$
+$B \cup D = \set{2,4}$
+$(A \cup C) \times (B \cup D) = \set{(1,2), (1,4), (3,2), (3,4)}$
+
+These two results are not equal.  
+
 > **Functions: 5.4A(a)**   
 
-A function $g:X\rightarrow Y$ is defined as follows:  
+**A function $g:X\rightarrow Y$ is defined as follows:**  
 
 |    $x$    | $g(x)$ |
 | :-------: | :----: |
@@ -162,27 +190,52 @@ A function $g:X\rightarrow Y$ is defined as follows:
 | sunflower |   1    |
 |   grass   |   4    |
 
-What is the domain, $\text{Dom}(g)$?  
+**What is the domain, $\text{Dom}(g)$?**  
 
-What is the codomain, $\text{Codom}(g)$?  
+$\set{cat, squirrel, sunflower, grass}$  
 
-What is the image, $\text{Im}(g)$?  
+**What is the codomain, $\text{Codom}(g)$?**  
 
-Is $g$ injective (one-to-one)?  
+The set $Y$  
 
-Is $g$ surjective (onto)?  
+**What is the image, $\text{Im}(g)$?**  
 
-Is $g$ bijective (a one-to-one correspondence)?  
+$\set{3, 0, 1, 4}$  
+
+**Is $g$ injective (one-to-one)?**  
+
+Yes.  
+
+**Is $g$ surjective (onto)?**  
+
+Yes. (Assuming $Y=\set{3,0,1,4}$)
+
+**Is $g$ bijective (a one-to-one correspondence)?**  
+
+Yes. Injectivity and surjectivity $\iff$ bijectivity. 
 
 > **Proposition 5.20.**  
 
 (ii) $A \times (B \cap C) = (A \times B) \cap (A \times C)$  
+***Proof.***  
+Let the ordered pair $(a, x)\in A\times (B\cap C)$.  
+$(a, x)\in A\times (B\cap C)$
+$\iff a\in A$ and $x\in (B\cap C)$, by definition of the cartesian product.  
+$\iff a\in A$ and $x\in B$ and $x\in C$, by definition of the intersection operation.  
+We now have the following true statement: $a\in A \land x\in B \land x\in C$  
+$\iff (a\in A \land x\in B) \land (a\in A \land x\in C)$  
+$\iff [(a, x) \in (A \times B)] \land [(a, x) \in (A \times C)]$  
+$\iff (a, x)\in [(A\times B) \cap (A\times C)]$, by definition of intersections.  
+Since $(a,x)\in A\times (B\cap C)\iff (a,x)\in [(A\times B) \cap (A\times C)]$, by the definition of set equality, these two sets are equal.  
+***QED.***  
 
 > **Project 4.3** (The $x + 1$ problem)  
 
 We revise the $3x + 1$ problem as follows: Pick your favorite natural number $m$, and define the following sequence:  
 
 (i) Define $x_1 := m$.  
+
+
 
 (ii) Assuming $x_n$ defined, define $x_{n+1} :=   
 \begin{cases}  
