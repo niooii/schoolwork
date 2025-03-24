@@ -39,7 +39,7 @@ $\therefore D\subseteq B$.
 
 Now prove $B\subseteq D$, that is, $m\in B \implies m\in D$.  
 Let $m\in B$. $m=3y+21$ for any $y\in\mathbb{N}$.  
-Now, we prove this implies $m=3x$, for some $x\in\N$ where $x>7$.  
+Now, we prove this implies $m=3x$, for some $x\in\mathbb{N}$ where $x>7$.  
 $m=3y+21=3(y+7)$.  
 We let $x=y+7$, for any $y\in\mathbb{N}$. This works because solving for $y$, $y=x-7$, and $(x-7\in\mathbb{N})\iff (x>7)$.  
 With $x=y+7$, we substitute:  
