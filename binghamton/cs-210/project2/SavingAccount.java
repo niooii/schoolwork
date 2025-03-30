@@ -8,6 +8,9 @@ public class SavingAccount extends BankAccount {
 
     // applies interest to account
     public void applyInterest() {
-        balance *= (1 + interestRate);
+        balance += calculateInterest();
     }
+
+    // calculates the interest amount gained
+    public double calculateInterest() { return balance * interestRate; }
 }
