@@ -54,7 +54,12 @@
     },
     "LaTeX Space": {
         "prefix": "spc",
-        "body": "\\space$1",
+        "body": "\\text{ }$1",
         "description": "Quickly insert a space"
+    },
+    "LaTeX text": {
+        "prefix": "text",
+        "body": "\\text{$1}",
+        "description": "Quickly insert a text block"
     }
 }
