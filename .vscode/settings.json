@@ -82,5 +82,10 @@
     "workbench.editorAssociations": {
         "*.pdf": "latex-workshop-pdf-hook"
     },
-    "markdown-preview-enhanced.previewTheme": "atom-dark.css"
+    "markdown-preview-enhanced.previewTheme": "atom-dark.css",
+
+    "editor.suggestSelection": "first",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggest.localityBonus": true,
+    "editor.snippetSuggestions": "top",
 }

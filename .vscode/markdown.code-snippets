@@ -43,13 +43,18 @@
         "description": "LaTeX set definition"
     },
     "Text \"and\"": {
-        "prefix": "andt",
+        "prefix": "tand",
         "body": "\\text{ and }$1",
         "description": "LaTeX \"and\" text"
     },
     "Text \"or\"": {
-        "prefix": "ort",
+        "prefix": "tor",
         "body": "\\text{ or }$1",
         "description": "LaTeX \"or\" text"
+    },
+    "LaTeX Space": {
+        "prefix": "spc",
+        "body": "\\space$1",
+        "description": "Quickly insert a space"
     }
 }

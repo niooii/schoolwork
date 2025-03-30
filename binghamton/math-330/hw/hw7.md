@@ -7,8 +7,6 @@ Determine which of the following set equalities are true. If a statement is true
 Definition of set equality:
 $$A=B \iff A\subseteq B \land B\subseteq A$$
 
-$$
-
 (i) $D = E$, where  
 $D := \{3x : x \in \mathbb{N} \land x > 7\}$  
 $E := \{y : y \in \mathbb{N}\}$  
