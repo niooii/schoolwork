@@ -2,6 +2,7 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// The main function is in the Driver.java file, for code clarity purposes.
 public class Bank {
     private static final int maxAccounts = 10;
     private final BankAccount[] accounts;

@@ -145,7 +145,7 @@ public class Driver {
                                                 else
                                                     soutln("Deposit failed.");
                                             },
-                                            () -> soutln("Trying to deposit a non-positive amount - try withdraw instead?")
+                                            () -> soutln("Invalid deposit amount.")
                                         );
                                     } else {
                                         promptDoubleInput("Enter withdraw amount: ", 0, Double.MAX_VALUE).ifPresentOrElse(
@@ -156,7 +156,7 @@ public class Driver {
                                                 else
                                                     soutln("Withdrawal failed.");
                                             },
-                                            () -> soutln("Trying to withdraw a non-positive amount - try deposit instead?")
+                                            () -> soutln("Invalid withdrawal amount.")
                                         );
                                     }
                                 },
