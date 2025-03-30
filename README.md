@@ -9,3 +9,8 @@ https://direct.mit.edu/books/monograph/5134/Technology-in-World-CivilizationA-Th
 Finish HW 5 for math 330
 
 https://www.reddit.com/r/askmath/comments/n0hdid/simple_and_minimal_example_of_g%C3%B6dels/
+
+# Replacing stupid wrong set definitions
+
+Replace all occurrences of `\\set\{(.*?)\}`  
+with `\\{$1\\}`

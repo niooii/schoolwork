@@ -99,7 +99,7 @@ Determine which of the following statements are true for all sets $A$, $B$, and 
 Only $C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$ is true.  
 ***Proof.***  
 Let $x\in C$. Since $C\subseteq A \iff (x\in C \implies x\in A)$, $x\in A$.   
-By definition, $A\cup B=\set{x:x\in A \text{ or } x\in B}$.  
+By definition, $A\cup B=\{x:x\in A \text{ or } x\in B\}$.  
 Since $x\in A \text{ or } x\in B$ is always true if $x\in A$, all elements of $A$ must be in $A\cup B$, that is, $A\subseteq (A\cup B)$.  
 Additionally, since $x\in A \text{ or } x\in B$ is always true if $x\in B$, $B\subseteq (A\cup B)$ (this will be used later).  
 Since $x\in A$ and $A\subseteq (A\cup B)$, $x\in (A\cup B)$.  
@@ -108,12 +108,12 @@ $\therefore C \subseteq A$ and $C \subseteq B \implies C \subseteq (A \cup B)$.
 
 Now, we disprove  $C \subseteq (A \cup B) \implies C \subseteq A$ and $C \subseteq B$, by a counterexample.  
 We define the following sets:  
-$A:=\set{1,2,3}$  
-$B:=\set{4,5}$  
+$A:=\{1,2,3\}$  
+$B:=\{4,5\}$  
 
-$(A\cup B) = \set{1,2,3,4,5}$  
-Define the set $C:=\set{2,3,4}$, where $C\subseteq (A\cup B)$.  
-$C=\set{2,3,4}$ is not a subset of $A=\set{1,2,3}$, which means $(C \subseteq A$ and $C \subseteq B)$ is false.  
+$(A\cup B) = \{1,2,3,4,5\}$  
+Define the set $C:=\{2,3,4\}$, where $C\subseteq (A\cup B)$.  
+$C=\{2,3,4\}$ is not a subset of $A=\{1,2,3\}$, which means $(C \subseteq A$ and $C \subseteq B)$ is false.  
 ***QED.***
 
 (ii) $C \subseteq A$ or $C \subseteq B \iff C \subseteq (A \cup B)$.  
@@ -130,11 +130,11 @@ $\therefore C \subseteq A$ or $C \subseteq B \implies C \subseteq (A \cup B)$.
 
 Now, we disprove $C \subseteq (A \cup B) \implies C \subseteq A$ or $C \subseteq B$, by a counterexample.  
 We define the same sets as before:  
-$A:=\set{1,2,3}$  
-$B:=\set{4,5}$  
+$A:=\{1,2,3\}$  
+$B:=\{4,5\}$  
 
-$(A\cup B) = \set{1,2,3,4,5}$  
-Define the set $C:=\set{2,3,4}$, where $C\subseteq (A\cup B)$.  
+$(A\cup B) = \{1,2,3,4,5\}$  
+Define the set $C:=\{2,3,4\}$, where $C\subseteq (A\cup B)$.  
 
 $C\subseteq A$ is false, and $C\subseteq B$ is false, which means $(C\subseteq A$ or $C\subseteq B)$ is false.    
 ***QED.***  
@@ -146,12 +146,12 @@ Someone tells you that the following equalities are true for all sets $A$, $B$, 
 (ii) $A \cap (B - C) = (A \cap B) - (A \cap C)$.  
 
 We rewrite the equality statement as follows:  
-$A \cap \set{x : x\in B \land x\notin C} = \set{y : y \in A \land y \in B} - \set{y : y \in A \land y\in C}$   
-$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : (y \in A \land y \in B) \land \lnot (y \in A \land y\in C)}$  
-$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : (y \in A \land y \in B) \land (y \notin A \lor y\notin C)}$  
+$A \cap \{x : x\in B \land x\notin C\} = \{y : y \in A \land y \in B\} - \{y : y \in A \land y\in C\}$   
+$\{x : x\in A \land x\in B \land x\notin C\} = \{y : (y \in A \land y \in B) \land \lnot (y \in A \land y\in C)\}$  
+$\{x : x\in A \land x\in B \land x\notin C\} = \{y : (y \in A \land y \in B) \land (y \notin A \lor y\notin C)\}$  
 For the definition on the right side, we know $y\in A$. Therefore, $y\notin A$ is always false.  
-$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : (y \in A \land y \in B) \land y\notin C}$  
-$\set{x : x\in A \land x\in B \land x\notin C} = \set{y : y \in A \land y \in B \land y\notin C}$  
+$\{x : x\in A \land x\in B \land x\notin C\} = \{y : (y \in A \land y \in B) \land y\notin C\}$  
+$\{x : x\in A \land x\in B \land x\notin C\} = \{y : y \in A \land y \in B \land y\notin C\}$  
 These are exactly the same definitions. Therefore, the equality holds.  
 
 > **Project 5.21**  
@@ -164,18 +164,18 @@ Let $A$, $B$, $C$, $D$ be sets. Decide whether each of the following statements 
 
 This statement is false. We prove this with a counterexample:  
 Define the following sets:  
-$A:=\set{1}$  
-$B:=\set{2}$  
-$C:=\set{3}$  
-$D:=\set{4}$  
+$A:=\{1\}$  
+$B:=\{2\}$  
+$C:=\{3\}$  
+$D:=\{4\}$  
 
-$A \times B = \set{(1,2)}$
-$C \times D = \set{(3,4)}$
-$(A \times B) \cup (C \times D) = \set{(1,2), (3,4)}$  
+$A \times B = \{(1,2)\}$
+$C \times D = \{(3,4)\}$
+$(A \times B) \cup (C \times D) = \{(1,2), (3,4)\}$  
 
-$A \cup C = \set{1,3}$
-$B \cup D = \set{2,4}$
-$(A \cup C) \times (B \cup D) = \set{(1,2), (1,4), (3,2), (3,4)}$
+$A \cup C = \{1,3\}$
+$B \cup D = \{2,4\}$
+$(A \cup C) \times (B \cup D) = \{(1,2), (1,4), (3,2), (3,4)\}$
 
 These two results are not equal.  
 
@@ -192,7 +192,7 @@ These two results are not equal.
 
 **What is the domain, $\text{Dom}(g)$?**  
 
-$\set{cat, squirrel, sunflower, grass}$  
+$\{cat, squirrel, sunflower, grass\}$  
 
 **What is the codomain, $\text{Codom}(g)$?**  
 
@@ -200,7 +200,7 @@ The set $Y$
 
 **What is the image, $\text{Im}(g)$?**  
 
-$\set{3, 0, 1, 4}$  
+$\{3, 0, 1, 4\}$  
 
 **Is $g$ injective (one-to-one)?**  
 
@@ -208,7 +208,7 @@ Yes.
 
 **Is $g$ surjective (onto)?**  
 
-Yes. (Assuming $Y=\set{3,0,1,4}$)
+Yes. (Assuming $Y=\{3,0,1,4\}$)
 
 **Is $g$ bijective (a one-to-one correspondence)?**  
 
@@ -239,8 +239,8 @@ We revise the $3x + 1$ problem as follows: Pick your favorite natural number $m$
 
 (ii) Assuming $x_n$ defined, define $x_{n+1} :=   
 \begin{cases}  
-\frac{x_n}{2} & \text{if } x_n \text{ is even,} \\
-x_n + 1 & \text{otherwise.}
+\frac{x_n}{2} & \text{ if } x_n \text{ is even,} \\
+x_n + 1 & \text{ otherwise.}
 \end{cases}$  
 
 Does this sequence eventually take on the value $1$, no matter what $m \in \mathbb{N}$ one chooses as the starting point? Try to prove your assertion.  
