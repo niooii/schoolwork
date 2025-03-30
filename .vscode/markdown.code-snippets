@@ -36,5 +36,20 @@
         "prefix": "\\C",
         "body": "\\mathbb{C}",
         "description": "Set of Complex Numbers"
+    },
+    "Set Definition": {
+        "prefix": "set",
+        "body": "\\{$1\\\\}",
+        "description": "LaTeX set definition"
+    },
+    "Text \"and\"": {
+        "prefix": "andt",
+        "body": "\\text{ and }$1",
+        "description": "LaTeX \"and\" text"
+    },
+    "Text \"or\"": {
+        "prefix": "ort",
+        "body": "\\text{ or }$1",
+        "description": "LaTeX \"or\" text"
     }
 }
