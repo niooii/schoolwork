@@ -53,7 +53,17 @@ $= (x_a + x_{a+1} + ... + x_b) + (y_a + y_{a+1}+...+ y_b)=(\sum_{j=a}^{b} x_j) +
 ## Corollary 4.22
 $\text{For } k \in \mathbb{Z}_{\geq 0}, \sum_{m=0}^{k} \binom{k}{m} = 2^k$  
 
+**Proof.**  
+We know $(a+b)^k=\sum_{m=0}^{k}\binom{k}{m}a^mb^{k-m}$, by proposition 4.21.  
+Let $a=1$ and $b=1$.   
+$(1+1)^k=\sum_{m=0}^{k}\binom{k}{m}1^m1^{k-m}$  
+### Intermediate proposition  
+$(\forall n\in\mathbb{N}) \text{ } 1^n=1$  
+**Proof.**  
 
+**QED.**
+
+$2^k=\sum_{m=0}^{k}\binom{k}{m}1^m1^{k-m}$  
 
 ## Project 4.12  
 $\text{(i)} \sum_{j=1}^{k} j = \frac{k(k+1)}{2}$  
