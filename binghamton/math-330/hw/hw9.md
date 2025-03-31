@@ -92,7 +92,41 @@ $\text{(ii)} \sum_{j=1}^{k} j^2 = \frac{k(k+1)(2k+1)}{6}$
 
 Find (and prove) a formula for $\sum_{j=1}^{k}j^3$, where $k\in\mathbb{N}$.  
 
+For the sum of $j^3$ with $k$ values $2,3,4$:  
+$1+8=9$  
+$1+8+27=36$  
+$1+8+27+64=100$  
 
+Looking at the first sum $\sum_{j=1}^{k} j$ for some $k$ values $2,3,4$:  
+$1+2=3$  
+$1+2+3=6$  
+$1+2+3+4=10$  
+
+Since we're given $\sum_{j=1}^{k} j = \frac{k(k+1)}{2}$, if we prove this pattern holds for all $k\geq1$, we can say $\sum_{j=1}^kj^3=(\sum_{j=1}^{k}j)^2=(\frac{k(k+1)}{2})^2=\frac{k^2(k+1)^2}{4}$.  
+
+**Proof.**  
+Proof by induction on $k\in\mathbb{N}$.   
+Let $P(k)$ be the statement $\sum_{j=1}^{k} j^3 = (\sum_{j=1}^{k}j)^2$  
+
+Prove the base case, $P(1)$:  
+$\sum_{j=1}^{1} j^3 = (\sum_{j=1}^{1}j)^2$  
+$1^3 = 1^2$  
+$1 = 1$  
+
+Now prove $P(k) \implies P(k+1)$:  
+Assume $P(k)$, that is, $\sum_{j=1}^{k} j^3 = (\sum_{j=1}^{k}j)^2=\frac{k^2(k+1)^2}{4}$  
+Prove $P(k+1)$, the statement $\sum_{j=1}^{k+1} j^3=\frac{(k+1)^2(k+2)^2}{4}$  
+
+$\sum_{j=1}^{k+1} j^3=(\sum_{j=1}^{k} j^3)+(\sum_{j=k}^{k+1} j^3)$, by proposition 4.16(i)  
+$=(\sum_{j=1}^{k} j^3)+(k+1)^3$, by definition of the summation  
+$=(\frac{k^2(k+1)^2}{4})+(k+1)^3$, using our induction hypothesis  
+$=\frac{k^2(k+1)^2+4(k+1)^3}{4}$  
+$=\frac{(k+1)^2(k^2+4(k+1))}{4}$, by factoring out $(k+1)^2$  
+$=\frac{(k+1)^2(k^2+4k+4)}{4}=\frac{(k+1)^2(k+2)^2}{4}$  
+$\therefore P(k)\implies P(k+1)$.  
+
+Proved by mathematical induction.  
+**QED.**  
 
 ## Project 4.23 — Leibniz's formula
 Consider an operation denoted by $'$ that is applied to symbols such as $u, v, w$. Assume that the operation $'$ satisfies the following axioms:  
@@ -123,8 +157,8 @@ $uv=uv$
 Now prove $P(k)\implies P(k+1)$.  
 Assume $P(k)$, that is, for some $k\geq0$, $(uv)^{(k)} = \sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$  
 $P(k+1)$ says $(uv)^{(k+1)} = \sum_{m=0}^{k+1} \binom{k+1}{m} u^{(m)} v^{(k+1-m)}$  
-$\sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$  
-$=\binom{0}{m}$
+$\sum_{m=0}^{k+1} \binom{k+1}{m} u^{(m)} v^{(k+1-m)}$  
+$=\binom{k+1}{0}u^{(0)}v^{(k+1)}$  
 
 
 ## Project 4.26  
