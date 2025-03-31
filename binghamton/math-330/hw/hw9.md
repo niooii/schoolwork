@@ -57,6 +57,7 @@ $\text{For } k \in \mathbb{Z}_{\geq 0}, \sum_{m=0}^{k} \binom{k}{m} = 2^k$
 We know $(a+b)^k=\sum_{m=0}^{k}\binom{k}{m}a^mb^{k-m}$, by proposition 4.21.  
 Let $a=1$ and $b=1$.   
 $(1+1)^k=\sum_{m=0}^{k}\binom{k}{m}1^m1^{k-m}$  
+
 ### Intermediate proposition  
 $(\forall n\in\mathbb{N}) \text{ } 1^n=1$  
 **Proof.**  
