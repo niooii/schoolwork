@@ -5,17 +5,18 @@ Prove props. 4.7(i), 4.13, 4.16(ii), 4.22. Do projects 4.12, 4.23, 4.26, 6.7(i).
 $(\forall k\in \mathbb{N}) \text{ } 5^{2k}-1 \text{ is divisble by } 24$  
 
 **Proof.**  
-Let $P(k)$ be the statement $5^{2k}-1 \text{ | } 24$, where $k\in\mathbb{N}$  
+
+Proof by induction on $k\in\mathbb{N}$.  
+Let $P(k)$ be the statement $5^{2k}-1 \text{ | } 24$    
+
 Prove the base case, $P(1)$:  
 $5^{2} - 1 \text{ | } 24 \iff \exists j\in\mathbb{Z}$ where $5^2-1=24j$.  
 $5^2-1=24j$  
 $24=24j$.  
 We set $j=1$, therefore $j$ exists.  
-$\therefore P(1)$ is true.  
 
 Now prove $P(k) \implies P(k+1)$.  
-Assume $P(k)$.  $P(k) \iff \exists m\in\mathbb{Z}$ where $5^{2k}-1=24m$  
-Prove $P(k+1)$ assuming $P(k)$.  
+Assume $P(k)$, that is, there exists an $m\in\mathbb{Z}$ where $5^{2k}-1=24m$  
 $P(k+1)$ says that there exists an $n\in\mathbb{Z}$ where $5^{2(k+1)}-1=24n$.  
 $24n=5^{2k+2} - 1 = 5^{2k}\cdot5^2 - 1=5^{2k}\cdot5^2 - 5^{2k} + 5^{2k} - 1$  
 $=5^{2k}(5^2 - 1) + (5^{2k} - 1)=5^{2k}\cdot24+24m=24(5^{2k}+m)$  
@@ -23,6 +24,7 @@ We've shown that the equation can be written as:
 $24n=24(5^{2k}+m)$, where $m\in\mathbb{Z}$  
 We can let $n=(5^{2k}+m)$, therefore $n$ exists and we know $n\in\mathbb{Z}$.  
 $\therefore P(k)\implies P(k+1)$.  
+
 Proved by mathematical induction.  
 **QED.**  
 
@@ -58,7 +60,7 @@ We know $(a+b)^k=\sum_{m=0}^{k}\binom{k}{m}a^mb^{k-m}$, by proposition 4.21.
 Let $a=1$ and $b=1$.   
 $(1+1)^k=\sum_{m=0}^{k}\binom{k}{m}1^m1^{k-m}$  
 
-### Intermediate proposition  
+### Intermediate proposition (i)
 $(\forall n\in\mathbb{N}) \text{ } 1^n=1$  
 **Proof (in case it isn't evident).**  
 Let $P(k)$ be the statement $1^k=1$.  
@@ -108,6 +110,21 @@ Define $w^{(k)}$ recursively by
 Prove:  
 $(uv)^{(k)} = \sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$.  
 
+**Proof.**  
+
+Proof by induction on $k\geq0$.  
+Let $P(k)$ be the statement $(uv)^{(k)} = \sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$  
+
+Prove the base case, $P(0)$:  
+$uv=\binom{0}{0}u^{(0)}v^{(0)}$  
+$uv=1\cdot u^{(0)}v^{(0)}$  
+$uv=uv$  
+
+Now prove $P(k)\implies P(k+1)$.  
+Assume $P(k)$, that is, for some $k\geq0$, $(uv)^{(k)} = \sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$  
+$P(k+1)$ says $(uv)^{(k+1)} = \sum_{m=0}^{k+1} \binom{k+1}{m} u^{(m)} v^{(k+1-m)}$  
+$\sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$  
+$=\binom{0}{m}$
 
 
 ## Project 4.26  
