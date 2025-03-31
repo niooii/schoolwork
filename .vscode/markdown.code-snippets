@@ -61,5 +61,10 @@
         "prefix": "text",
         "body": "\\text{$1}",
         "description": "Quickly insert a text block"
+    },
+    "M-dash": {
+        "prefix": "dash",
+        "body": "—$1",
+        "description": "Insert an m-dash"
     }
 }
