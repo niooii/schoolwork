@@ -60,11 +60,29 @@ $(1+1)^k=\sum_{m=0}^{k}\binom{k}{m}1^m1^{k-m}$
 
 ### Intermediate proposition  
 $(\forall n\in\mathbb{N}) \text{ } 1^n=1$  
-**Proof.**  
-
-**QED.**
+**Proof (in case it isn't evident).**  
+Let $P(k)$ be the statement $1^k=1$.  
+Prove the base case, $P(1)$.  
+$1^1=1^0\cdot 1$, by definition.  
+$1^1=1\cdot 1$, since we know $1^0=1$ by definition.  
+$1^1=1$.    
+Prove $P(k)\implies P(k+1)$.  
+Assume $P(k)$ is true, $1^k=1$.  
+We prove $P(k+1)$, the statement $1^{k+1}=1$.    
+$1^{k+1}=1^k\cdot 1^1=1\cdot 1^1=1\cdot 1 = 1$.  
+Proved by mathematical induction.    
+**QED.**  
 
 $2^k=\sum_{m=0}^{k}\binom{k}{m}1^m1^{k-m}$  
+
+We know $k-m\geq0$, so either $k-m\in\mathbb{N}$, or $k-m=0$.   
+If $k-m\in\mathbb{N}$, then $1^{k-m}=1$, as proved earlier.  
+If $k-m=0$, then $1^0=1$ by definition.  
+Therefore, $1^{k-m}=1$.  The same reasoning shows that $1^m=1$, since $m\geq0$.  
+
+$2^k=\sum_{m=0}^{k}\binom{k}{m}1\cdot 1$  
+$2^k=\sum_{m=0}^{k}\binom{k}{m}$  
+**QED.**  
 
 ## Project 4.12  
 $\text{(i)} \sum_{j=1}^{k} j = \frac{k(k+1)}{2}$  
