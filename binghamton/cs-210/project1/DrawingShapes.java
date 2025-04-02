@@ -155,7 +155,7 @@ enum ShapeType {
             }
         }
         System.out.printf("Below is a %s\n", this.details(w, h));
-        System.out.println(s);
+        System.out.println(s.trim());
     }
 }
 
