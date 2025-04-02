@@ -2,8 +2,9 @@ import java.util.Optional;
 import java.util.Scanner;
 import java.util.concurrent.atomic.AtomicBoolean;
 
+// The main function is in the Driver.java file, for code clarity purposes.
 public class Bank {
-    private static final int maxAccounts = 100;
+    private static final int maxAccounts = 10;
     private final BankAccount[] accounts;
     private int nextAccountNum = 0;
 
@@ -64,35 +65,58 @@ public class Bank {
     }
 
     // adds funds to account
-    public boolean deposit(String accountNum, double amount) {
+    // returns the account modified, or null if there was an error modifying
+    public BankAccount deposit(String accountNum, double amount) {
         BankAccount account = getBankAccountFromNum(accountNum);
 
-        if (account == null) {
-            System.out.println("Account not found.");
-            return true;
-        }
+        if (account == null)
+            return null;
 
-        return account.deposit(amount);
+        if (!account.deposit(amount))
+            return null;
+        else
+            return account;
     }
 
+    public boolean accountExists(String accountNum) { return getBankAccountFromNum(accountNum) != null; }
+
     // removes funds from account
-    public boolean withdraw(String accountNum, double amount) {
+    // returns the account modified, or null if there was an error modifying
+    public BankAccount withdraw(String accountNum, double amount) {
         BankAccount account = getBankAccountFromNum(accountNum);
 
-        if (account == null) {
-            System.out.println("Account not found.");
-            return true;
-        }
+        if (account == null)
+            return null;
 
-        return account.withdraw(amount);
+        if(!account.withdraw(amount))
+            return null;
+        else
+            return account;
     }
 
     // lists all accounts
     public void displayAllAccounts() {
         for (BankAccount account : accounts) {
             if (account == null)
-                break;
+                // continue instead of break, for fragmentation in the future since this is a flat array
+                continue;
             System.out.printf("Account number: %s, Type: %s, Balance: %.2f\n", account.getAccountNumber(), account.getAccountType(), account.getBalance());
         }
+    }
+
+    // applies interest to all applicable accounts
+    // returns the num of accounts modified
+    public int applyInterestToAll() {
+        int count = 0;
+        for (BankAccount account : accounts) {
+            if (account == null)
+                continue;
+
+            if (account instanceof SavingAccount acc) {
+                acc.applyInterest();
+                count++;
+            }
+        }
+        return count;
     }
 }

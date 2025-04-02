@@ -37,3 +37,10 @@ Skinned people to learn more about anatomy lol
 
 **Astronomy**: Geocentrism Heliocentrism etc
 - Nicolaus Copernicus (1473-1543): Heliocentrism
+
+
+# 3/31
+In WW1:
+40 million casualities
+18 million deaths (10 mil were military people, 8 mil not).
+2/3 military deaths were in battle.

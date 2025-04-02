@@ -36,5 +36,35 @@
         "prefix": "\\C",
         "body": "\\mathbb{C}",
         "description": "Set of Complex Numbers"
+    },
+    "Set Definition": {
+        "prefix": "set",
+        "body": "\\{$1\\\\}",
+        "description": "LaTeX set definition"
+    },
+    "Text \"and\"": {
+        "prefix": "tand",
+        "body": "\\text{ and }$1",
+        "description": "LaTeX \"and\" text"
+    },
+    "Text \"or\"": {
+        "prefix": "tor",
+        "body": "\\text{ or }$1",
+        "description": "LaTeX \"or\" text"
+    },
+    "LaTeX Space": {
+        "prefix": "spc",
+        "body": "\\text{ }$1",
+        "description": "Quickly insert a space"
+    },
+    "LaTeX text": {
+        "prefix": "text",
+        "body": "\\text{$1}",
+        "description": "Quickly insert a text block"
+    },
+    "M-dash": {
+        "prefix": "dash",
+        "body": "—$1",
+        "description": "Insert an m-dash"
     }
 }

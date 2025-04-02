@@ -1,6 +1,6 @@
 // checking account with overdraft
 public class CheckingAccount extends BankAccount {
-    private double overDraftLimit;
+    private final double overDraftLimit;
 
     public CheckingAccount(String accountNumber, String accountType, double balance, double overDraftLimit) {
         super(accountNumber, accountType, balance);
@@ -11,10 +11,14 @@ public class CheckingAccount extends BankAccount {
     @Override
     public boolean withdraw(double amount) {
         double newBalance = balance - amount;
-        if (newBalance <= -overDraftLimit) {
+        if (newBalance >= -overDraftLimit) {
             balance = newBalance;
             return true;
         }
         return false;
+    }
+
+    public double getOverDraftLimit() {
+        return overDraftLimit;
     }
 }

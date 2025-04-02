@@ -1,0 +1,6 @@
+[submodule "bxsci/gamedev-final"]
+	path = bxsci/gamedev-final
+	url = https://github.com/niooii/gdf
+[submodule "bxsci/appdev"]
+	path = bxsci/appdev
+	url = https://github.com/niooii/AppDev.git
