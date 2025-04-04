@@ -158,7 +158,7 @@ Now prove $P(k)\implies P(k+1)$.
 Assume $P(k)$, that is, for some $k\geq0$, $(uv)^{(k)} = \sum_{m=0}^{k} \binom{k}{m} u^{(m)} v^{(k-m)}$  
 $P(k+1)$ says $(uv)^{(k+1)} = \sum_{m=0}^{k+1} \binom{k+1}{m} u^{(m)} v^{(k+1-m)}$  
 $\sum_{m=0}^{k+1} \binom{k+1}{m} u^{(m)} v^{(k+1-m)}$  
-$=\binom{k+1}{0}u^{(0)}v^{(k+1)}$  
+$=\binom{k+1}{0}u^{(0)}v^{(k+1)}+\sum_{m=1}^{k} \binom{k+1}{m} u^{(m)} v^{(k+1-m)} + \binom{k+1}{k+1}a^{n+1}b^0$, by proposition 4.16(i)  
 
 
 ## Project 4.26  
