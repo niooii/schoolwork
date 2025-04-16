@@ -88,4 +88,5 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.suggest.localityBonus": true,
     "editor.snippetSuggestions": "top",
+    "cmake.sourceDirectory": "/home/niooi/schoolwork/bxsci/appdev/FlutterProjects/jupiter_app/windows",
 }
