@@ -37,9 +37,9 @@ We prove this with induction on $k\in\mathbb{Z}_{\geq0}$.
 
 Let $P(k)$ be the statement $\sum_{j=0}^k x^j = \frac{1-x^{k+1}}{1-x}$, for some $x\in\mathbb{Z}$.  
 
-**Base case: Prove $P(0)$.**  
-
 Let $x\in \mathbb{Z}$.  
+
+**Base case: Prove $P(0)$.**  
 
 $P(0)$ is the statement $\sum_{j=0}^0 x^j = \frac{1-x^{1}}{1-x}$.  
 By definition of the summation, $\sum_{j=0}^0 x^j = x^0$, and by definition of powers, $x^0=1$. By definition of powers, $x^1=x^0 \cdot x = 1 \cdot x = x$, therefore $\frac{1-x^{1}}{1-x}=\frac{1-x}{1-x}=1$. 
@@ -48,7 +48,14 @@ Therefore, $\sum_{j=0}^0 x^j = \frac{1-x^{1}}{1-x}=1$.
 
 **Inductive step: Prove $P(k)\implies P(k+1)$.**  
 
-`TODO`
+Assume $P(k)$, that is, $\sum_{j=0}^k x^j = \frac{1-x^{k+1}}{1-x}$.  
+
+$P(k+1)$ is the statement $\sum_{j=0}^{k+1} x^j = \frac{1-x^{k+2}}{1-x}$.  
+
+By definition, $\sum_{j=0}^{k+1} x^j = \sum_{j=0}^k (x^j) + x^{k+1}$. By the inductive hypothesis, we can substitute the summation: $\frac{1-x^{k+1}}{1-x}+x^{k+1}$. Since $x\neq 1$, then $x-1\neq 0$, and we can multiply the $x^{k+1}$ term by $\frac{1-x}{1-x}$: $\frac{1-x^{k+1} + (1-x)x^{k+1}}{1-x}$.  
+
+- $\frac{1-x^{k+1} + x^{k+1}-(x\cdot x^{k+1})}{1-x}$, simplifying the expression.  
+- a
 
 ## Proposition 4.16(ii)   
 $\text{ Let } (x_j)_{j=a}^{\infty} \text{ and } (y_j)_{j=a}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
