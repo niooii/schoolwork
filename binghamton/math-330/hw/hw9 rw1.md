@@ -32,32 +32,46 @@ Proved by mathematical induction.
 $\text{For } x \neq 1 \text{ and } k \in \mathbb{Z}_{\geq 0}, \sum_{j=0}^k x^j = \frac{1-x^{k+1}}{1-x}$  
 
 **Proof.**  
-We can write the sum as $S=\sum_{j=0}^k x^j=1+x+x^2+...+x^k$. Then, multiply $S$ by $(1-x)$:  
-$(1-x)S=(1-x)(1+x+x^2+...+x^k)$.  We can do this because since $x\neq1$, we will not be multiplying $S$ by $0$.  
-Distributing on the right side:  
-$(1-x)S=(1+x+x^2+...+x^k)-x(1+x+x^2+...+x^k)$  
-$=(1+x+x^2+...+x^k)-(x+x^2+x^3+...+x^{k+1})$  
-$=(1+x+x^2+...+x^k)+(-x-x^2-x^3-...-x^{k+1})$  
-$=(1-x^{k+1})$.  
-Dividing both sides of $(1-x)S=1-x^{k+1}$, we obtain $S=\frac{1-x^{k+1}}{1-x}$.  
-**QED.**  
-*This was probably supposed to be by induction, but I like this proof a lot.*  
+
+We prove this with induction on $k\in\mathbb{Z}_{\geq0}$.  
+
+Let $P(k)$
 
 ## Proposition 4.16(ii)   
-$\text{ Let } (x_j)_{j=1}^{\infty} \text{ and } (y_j)_{j=1}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
+$\text{ Let } (x_j)_{j=a}^{\infty} \text{ and } (y_j)_{j=a}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
 
 **Proof.**  
 
 Let $a \in \mathbb{Z}$.  
-We prove this with induction on $k\in \mathbb{N}$.  
+We prove this with induction on $k\in \mathbb{Z}$.  
 
 Let $P(k)$ be the statement $\sum_{j=a}^{k} (x_j + y_j) = \left( \sum_{j=a}^{k} x_j \right) + \left( \sum_{j=a}^{k} y_j \right)$.  
 
 **Base case: Prove $P(a)$.**  
 
+$P(a)$ is the statement $\sum_{j=a}^{a} (x_j + y_j) = \left( \sum_{j=a}^{a} x_j \right) + \left( \sum_{j=a}^{a} y_j \right)$, for some fixed $a\in\mathbb{Z}$.  
+By definition of summation, $\sum_{j=a}^{a} (x_j + y_j)=x_a+y_a=\left( \sum_{j=a}^{k} x_j \right) + \left( \sum_{j=a}^{k} y_j \right)$.  
+
 **Inductive step: Prove $P(k)\implies P(k+1)$.**  
 
-`TODO`
+Assume $P(k)$, that is, $\sum_{j=a}^{k} (x_j + y_j) = \left( \sum_{j=a}^{k} x_j \right) + \left( \sum_{j=a}^{k} y_j \right)$.  
+
+$P(k+1)$ is the statement $\sum_{j=a}^{k+1} (x_j + y_j) = \left( \sum_{j=a}^{k+1} x_j \right) + \left( \sum_{j=a}^{k+1} y_j \right)$.  
+
+By definition of summation:  
+$\sum_{j=a}^{k+1} (x_j + y_j)=\sum_{j=a}^{k} (x_j + y_j) + (x_{k+1}+y_{k+1})$   
+
+$\sum_{j=a}^{k+1} (x_j)=\sum_{j=a}^{k} (x_j) + x_{k+1}$  
+
+$\sum_{j=a}^{k+1} (y_j)=\sum_{j=a}^{k} (y_j) + y_{k+1}$   
+
+Let $s=\sum_{j=a}^{k} (x_j + y_j) = \left( \sum_{j=a}^{k} x_j \right) + \left( \sum_{j=a}^{k} y_j \right)$, by our inductive hypothesis.  
+
+Substituting the definitions: $\sum_{j=a}^{k} (x_j + y_j) + (x_{k+1}+y_{k+1})=\left(\sum_{j=a}^{k} (x_j) + x_{k+1} \right) +\left(\sum_{j=a}^{k} (y_j) + y_{k+1}\right)$.  
+Rearranging terms: $\sum_{j=a}^{k} (x_j + y_j) + (x_{k+1}+y_{k+1})=\left(\sum_{j=a}^{k} (x_j) + \sum_{j=a}^{k} (y_j) \right) +\left(x_{k+1} + y_{k+1}\right)$.  
+After substituting $s$, we obtain: $s+(x_{k+1}+y_{k+1})=s+(x_{k+1}+y_{k+1})$. This is trivially true.  
+
+Proved by induction.  
 
 **QED.**  
 
