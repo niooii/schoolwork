@@ -35,7 +35,9 @@ $\text{For } x \neq 1 \text{ and } k \in \mathbb{Z}_{\geq 0}, \sum_{j=0}^k x^j =
 
 We prove this with induction on $k\in\mathbb{Z}_{\geq0}$.  
 
-Let $P(k)$
+Let $P(k)$ be the statement $\sum_{j=0}^k x^j = \frac{1-x^{k+1}}{1-x}$, for some $x\in\mathbb{Z}$.  
+
+**Base case: Prove $P(k)$**
 
 ## Proposition 4.16(ii)   
 $\text{ Let } (x_j)_{j=a}^{\infty} \text{ and } (y_j)_{j=a}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
