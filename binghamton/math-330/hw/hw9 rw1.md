@@ -37,7 +37,18 @@ We prove this with induction on $k\in\mathbb{Z}_{\geq0}$.
 
 Let $P(k)$ be the statement $\sum_{j=0}^k x^j = \frac{1-x^{k+1}}{1-x}$, for some $x\in\mathbb{Z}$.  
 
-**Base case: Prove $P(k)$**
+**Base case: Prove $P(0)$.**  
+
+Let $x\in \mathbb{Z}$.  
+
+$P(0)$ is the statement $\sum_{j=0}^0 x^j = \frac{1-x^{1}}{1-x}$.  
+By definition of the summation, $\sum_{j=0}^0 x^j = x^0$, and by definition of powers, $x^0=1$. By definition of powers, $x^1=x^0 \cdot x = 1 \cdot x = x$, therefore $\frac{1-x^{1}}{1-x}=\frac{1-x}{1-x}=1$. 
+
+Therefore, $\sum_{j=0}^0 x^j = \frac{1-x^{1}}{1-x}=1$.  
+
+**Inductive step: Prove $P(k)\implies P(k+1)$.**  
+
+`TODO`
 
 ## Proposition 4.16(ii)   
 $\text{ Let } (x_j)_{j=a}^{\infty} \text{ and } (y_j)_{j=a}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
