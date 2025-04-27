@@ -47,9 +47,18 @@ Dividing both sides of $(1-x)S=1-x^{k+1}$, we obtain $S=\frac{1-x^{k+1}}{1-x}$.
 $\text{ Let } (x_j)_{j=1}^{\infty} \text{ and } (y_j)_{j=1}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
 
 **Proof.**  
-We can express the sum $\sum_{j=a}^{b} (x_j + y_j)=(x_a + y_a)+(x_{a+1} + y_{a+1})+...+(x_b + y_b)$  
-$=x_a + y_a+x_{a+1} + y_{a+1}+...+x_b + y_b = x_a + x_{a+1} + ... + x_b + y_a + y_{a+1}+...+ y_b$  
-$= (x_a + x_{a+1} + ... + x_b) + (y_a + y_{a+1}+...+ y_b)=(\sum_{j=a}^{b} x_j) + (\sum_{j=a}^{b} y_j)$  
+
+Let $a \in \mathbb{Z}$.  
+We prove this with induction on $k\in \mathbb{N}$.  
+
+Let $P(k)$ be the statement $\sum_{j=a}^{k} (x_j + y_j) = \left( \sum_{j=a}^{k} x_j \right) + \left( \sum_{j=a}^{k} y_j \right)$.  
+
+**Base case: Prove $P(a)$.**  
+
+**Inductive step: Prove $P(k)\implies P(k+1)$.**  
+
+`TODO`
+
 **QED.**  
 
 ## Corollary 4.22
