@@ -55,7 +55,14 @@ $P(k+1)$ is the statement $\sum_{j=0}^{k+1} x^j = \frac{1-x^{k+2}}{1-x}$.
 By definition, $\sum_{j=0}^{k+1} x^j = \sum_{j=0}^k (x^j) + x^{k+1}$. By the inductive hypothesis, we can substitute the summation: $\frac{1-x^{k+1}}{1-x}+x^{k+1}$. Since $x\neq 1$, then $x-1\neq 0$, and we can multiply the $x^{k+1}$ term by $\frac{1-x}{1-x}$: $\frac{1-x^{k+1} + (1-x)x^{k+1}}{1-x}$.  
 
 - $\frac{1-x^{k+1} + x^{k+1}-(x\cdot x^{k+1})}{1-x}$, simplifying the expression.  
-- a
+- $\frac{1-(x\cdot x^{k+1})}{1-x}$, by cancellation.  
+- $\frac{1-x^{k+2}}{1-x}$, by Proposition 4.6(ii), as we know $x=x^1$ from before.  
+
+Therefore, $P(k+1)$ is true.  
+
+Proved by induction.  
+
+**QED.**  
 
 ## Proposition 4.16(ii)   
 $\text{ Let } (x_j)_{j=a}^{\infty} \text{ and } (y_j)_{j=a}^{\infty} \text{ be sequences in } \mathbb{Z}, \text{ and let } a,b,c \in \mathbb{Z} \text{ such that } a < b < c. \text{ Then, } \sum_{j=a}^{b} (x_j + y_j) = \left( \sum_{j=a}^{b} x_j \right) + \left( \sum_{j=a}^{b} y_j \right)$  
