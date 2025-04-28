@@ -155,6 +155,7 @@ $1+2+3+4=10$
 Since we're given $\sum_{j=1}^{k} j = \frac{k(k+1)}{2}$, if we prove this pattern holds for all $k\geq1$, we can say $\sum_{j=1}^kj^3=(\sum_{j=1}^{k}j)^2=(\frac{k(k+1)}{2})^2=\frac{k^2(k+1)^2}{4}$.  
 
 **Proof.**  
+
 Proof by induction on $k\in\mathbb{N}$.   
 Let $P(k)$ be the statement $\sum_{j=1}^{k} j^3 = (\sum_{j=1}^{k}j)^2$  
 
@@ -176,6 +177,7 @@ $=\frac{(k+1)^2(k^2+4k+4)}{4}=\frac{(k+1)^2(k+2)^2}{4}$
 $\therefore P(k)\implies P(k+1)$.  
 
 Proved by mathematical induction.  
+
 **QED.**  
 
 ## Project 4.23 — Leibniz's formula
