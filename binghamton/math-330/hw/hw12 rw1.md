@@ -1,4 +1,4 @@
-# Homework 12
+# Homework 12 [REWRITE]
 Prove Props. 8.40, 8.43, 8.49. Do projects 8.44, 8.51, 9.3(i-iii), 9.4
 
 You may use Proposition 8.25A without proof.  
@@ -141,15 +141,16 @@ $\text{Determine which of the following functions are injective, surjective, or 
 
 $\text{(i) } f : \mathbb{Z} \to \mathbb{Z}, f(n) = n^2\text{.}$  
 
-This is neither surjective or injective. The image is a subset of $\mathbb{Z}_{\geq0}$, while the codomain is $\mathbb{Z}$, therefore it is not surjective.  For both $x=1,-1$, we know $y=1$, therefore it is not injective.  
+This is not surjective, injective, or bijective. The image is a subset of $\mathbb{Z}_{\geq0}$, while the codomain is $\mathbb{Z}$, therefore it is not surjective.  For both $x=1,-1$, we know $y=1$, therefore it is not injective.  Since it is not surjective and injective, it is not bijective.  
+
 
 $\text{(ii) } f : \mathbb{Z} \to \mathbb{Z}_{\geq 0}, f(n) = n^2\text{.}$  
 
-This is neither surjective or injective. This is not surjective, as the image is a subset of $Z_{\geq0}$, the codomain (the subset contains all perfect squares, but numbers like 2, 3, 5 have no mapping). This is not injective, for the same reason as in part $\text{(i)}$.  
+This is not surjective, injective or bijective. This is not surjective, as the image is a subset of $Z_{\geq0}$, the codomain (the subset contains all perfect squares, but numbers like 2, 3, 5 have no mapping). This is not injective, for the same reason as in part $\text{(i)}$. Since it is not surjective and injective, it is not bijective.  
 
 $\text{(iii) } f : \mathbb{Z}_{\geq 0} \to \mathbb{Z}_{\geq 0}, f(n) = n^2\text{.}$    
 
-It is injective because now the function is strictly monotonic, and will never repeat an output. It is not surjective for the same reason as part $(ii)$.  
+It is injective because now the function is strictly monotonic, and will never repeat an output. It is not surjective for the same reason as part $(ii)$, therefore it is not bijective.  
 
 ## Project 9.4
 $\text{Construct (many) functions that are}$  
@@ -173,4 +174,3 @@ $\text{(iv) neither injective nor surjective.}$
 
 $f(x)=x^2$  
 The image is $\mathbb{R}_{\geq0}$, while the codomain is $\mathbb{R}$, therefore it is not surjective.  For both $x=1,-1$, we know $y=1$, therefore it is not injective.  
-
