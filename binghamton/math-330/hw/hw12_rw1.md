@@ -6,7 +6,7 @@ Most of §§8.1-3 is familiar, but not §8.4.
 Don't forget to read the [advice](https://people.math.binghamton.edu/zaslav/330.S25/adv.html#8.25A) page.  
 
 ## Proposition 8.25A  
-Suppose x, y, z, w ∈ R and x, w ≠ 0. Then $\frac{y}{x}\cdot\frac{z}{w}$ = $\frac{yz}{xw}$.  
+Suppose $x, y, z, w \in R and x, w \neq 0$. Then $\frac{y}{x}\cdot\frac{z}{w}$ = $\frac{yz}{xw}$.  
 Use this freely.  
 
 ## Proposition 8.40  
@@ -23,7 +23,7 @@ $\text{(ii) }$ Let $x,y\in\mathbb{R}_{>0}$. $\text{ If }x<y \text{ then } 0<\fra
 
 **Proof.**  
 
-Assume $x,y\in\mathbb{R}_{>0} \text{ and }x<y $.  
+Assume $x,y\in\mathbb{R}_{>0} \text{ and }x<y$.  
 By part (i) of this proposition, since $x,y\in\mathbb{R}_{>0}$, we know $\frac{1}{x},\frac{1}{y}\in\mathbb{R}_{>0}$. In other words, both $\frac{1}{x}>0$ and $\frac{1}{y}>0$.  
 
 Now, prove $\frac{1}{y}<\frac{1}{x}$.  
