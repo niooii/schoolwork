@@ -4,3 +4,6 @@
 [submodule "bxsci/appdev"]
 	path = bxsci/appdev
 	url = https://github.com/niooii/AppDev.git
+[submodule "binghamton/cs-310/cs310-fall2025-cp0-niooii"]
+	path = binghamton/cs-310/cs310-fall2025-cp0-niooii
+	url = https://github.com/Binghamton-University-CS/cs310-fall2025-cp0-niooii.git
