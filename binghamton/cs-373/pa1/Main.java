@@ -64,7 +64,7 @@ public class Main {
             String tapeInput = tape[head];
 
             if (!transitions.containsKey(currState) || !transitions.get(currState).containsKey(tapeInput)) {
-                System.out.println(tape.join("") + " reject");
+                System.out.println(String.join("", tape) + " reject");
                 return;
             }
 
@@ -79,17 +79,17 @@ public class Main {
             String type = stateTypes.get(currState);
             switch (type) {
             case "accept":
-                System.out.println(tape.join("") + " accept");
+                System.out.println(String.join("", tape) + " accept");
                 return;
             case "reject":
-                System.out.println(tape.join("") + " reject");
+                System.out.println(String.join("", tape) + " reject");
                 return;
             }
             if (head < 0) {
-                System.out.println(tape.join("") + " crash");
+                System.out.println(String.join("", tape) + " crash");
                 return;
             }
         }
-        System.out.println(tape.join("") + " quit");
+        System.out.println(String.join("", tape) + " quit");
     }
 }
