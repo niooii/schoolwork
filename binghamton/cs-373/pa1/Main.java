@@ -3,9 +3,22 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.function.Function;
 
 public class Main {
+
+    static String tapeToStr(ArrayList<String> tape, int head) {
+        String s = String.join("", tape).replace("_", " ").trim();
+        // find first blank space
+        int idx = s.indexOf(' ');
+        if (idx == -1) {
+            return s.substring(head);
+        } else {
+            return s.substring(head, idx);
+        }
+    }
+
     public static void main(String[] args) throws FileNotFoundException {
         String filename = args[0];
         String in = args[1];
@@ -19,7 +32,7 @@ public class Main {
         while (sc.hasNextLine()) {
             String ln = sc.nextLine();
             if (ln.startsWith("state")) {
-                String[] stuff = ln.split(" ");
+                String[] stuff = ln.trim().split("\\s+");
                 Integer state = Integer.parseInt(stuff[1]);
                 String type = "";
                 if (stuff.length == 3) 
@@ -29,12 +42,12 @@ public class Main {
 
                 transitions.put(state, new HashMap<>());
 
-                if (type == "start")
+                if (type.equals("start"))
                     start = state;
             } else {
                 // transition path
-                String[] stuff = ln.split(" ");
-                String from = stuff[1];
+                String[] stuff = ln.trim().split("\\s+");
+                Integer from = Integer.parseInt(stuff[1]);
                 String input = stuff[2];
                 
                 Transition t = new Transition();
@@ -58,38 +71,46 @@ public class Main {
 
         int head = 0, i = 0, currState = start;
 
-        String[] tape = in.split("");
+        ArrayList<String> tape = new ArrayList<>();
+        for (String s : in.split("")) {
+            tape.add(s);
+        }
 
         for (i = 0; i < max; i++) {
-            String tapeInput = tape[head];
+            String tapeInput = tape.get(head);
 
             if (!transitions.containsKey(currState) || !transitions.get(currState).containsKey(tapeInput)) {
-                System.out.println(String.join("", tape) + " reject");
+                System.out.println(tapeToStr(tape, head) + " reject");
                 return;
             }
 
             Transition t = transitions.get(currState).get(tapeInput);
 
-            tape[head] = t.toWrite;
+            tape.set(head, t.toWrite);
             
             // switch to next state
             currState = t.target;
             head += t.action;
 
+            while (head >= tape.size()) {
+                tape.add("_");
+            }
+
+            if (head < 0) {
+                System.out.println(tapeToStr(tape, head) + " crash");
+                return;
+            }
+
             String type = stateTypes.get(currState);
             switch (type) {
             case "accept":
-                System.out.println(String.join("", tape) + " accept");
+                System.out.println(tapeToStr(tape, head) + " accept");
                 return;
             case "reject":
-                System.out.println(String.join("", tape) + " reject");
-                return;
-            }
-            if (head < 0) {
-                System.out.println(String.join("", tape) + " crash");
+                System.out.println(tapeToStr(tape, head) + " reject");
                 return;
             }
         }
-        System.out.println(String.join("", tape) + " quit");
+        System.out.println(tapeToStr(tape, head) + " quit");
     }
 }
