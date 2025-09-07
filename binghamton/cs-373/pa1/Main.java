@@ -6,6 +6,12 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.function.Function;
 
+class Transition {
+    public Integer target;
+    public String toWrite;
+    public int action;
+}
+
 public class Main {
 
     static String tapeToStr(ArrayList<String> tape, int head) {
@@ -85,7 +91,7 @@ public class Main {
             }
 
             // if no transition defined, its a reject
-            if (!(transitions.containsKey(currState) && transitions.get(currState).contains(tapeInput)) {
+            if (!(transitions.containsKey(currState) && transitions.get(currState).containsKey(tapeInput))) {
                 System.out.println(tapeToStr(tape, head) + " reject");
                 return;
             }
