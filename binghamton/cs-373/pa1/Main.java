@@ -84,6 +84,12 @@ public class Main {
                 return;
             }
 
+            // if no transition defined, its a reject
+            if (!(transitions.containsKey(currState) && transitions.get(currState).contains(tapeInput)) {
+                System.out.println(tapeToStr(tape, head) + " reject");
+                return;
+            }
+
             Transition t = transitions.get(currState).get(tapeInput);
 
             tape.set(head, t.toWrite);
