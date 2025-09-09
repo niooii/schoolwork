@@ -19,7 +19,7 @@ bool AnimalsInZoo::store(Animal &other) {
   data[size++] = other;
 
   std::cout << std::format("Animal {} added to spot {} of the contained array.",
-                           other.species, size - 1);
+                           other.species, size - 1) << endl;
 
   return true;
 }
@@ -32,7 +32,7 @@ bool AnimalsInZoo::remove(const std::string &name) {
       return true;
     }
   }
-  std::cout << std::format("Animal {} not found.", name);
+  std::cout << std::format("Animal {} not found.", name) << endl;
   return false;
 }
 
@@ -55,6 +55,24 @@ void AnimalsInZoo::readSizes(unsigned int &count, unsigned int &capacity){
 void AnimalsInZoo::show() const {
     for (ull i = 0; i < size; i++) {
         auto& a = data[i];
-        std::cout << std::format("{}: {}, {} lbs {}", i, a.species, a.weight, a.dangerous ? "be careful!" : "");
+        std::cout << std::format("{}: {}, {} lbs {}", i, a.species, a.weight, a.dangerous ? "be careful!" : "") << endl;
     }
+}
+
+ull AnimalsInZoo::makeSpace(ull count){ 
+    if (count == 0)
+        return count;
+
+    capacity += count;
+    
+    Animal *ndata = new Animal[capacity];
+
+    for (ull i = 0; i < size; i++) {
+      ndata[i] = std::move(data[i]);
+    }
+
+    delete data;
+    data = ndata;
+
+    return count;
 }
