@@ -12,16 +12,16 @@ class Transition {
     public int action;
 }
 
-public class Main {
-
+class Main {
     static String tapeToStr(ArrayList<String> tape, int head) {
         String s = String.join("", tape).replace("_", " ").trim();
         // find first blank space
         int idx = s.indexOf(' ');
+        int start = head == -1 ? 0 : head;
         if (idx == -1) {
-            return s.substring(head);
+            return s.substring(start);
         } else {
-            return s.substring(head, idx);
+            return s.substring(start, idx);
         }
     }
 
