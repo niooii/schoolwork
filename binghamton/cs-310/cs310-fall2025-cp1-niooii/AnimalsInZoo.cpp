@@ -12,7 +12,7 @@ bool AnimalsInZoo::store(Animal &other) {
       ndata[i] = std::move(data[i]);
     }
 
-    delete data;
+    delete[] data;
     data = ndata;
   }
 
@@ -71,7 +71,7 @@ ull AnimalsInZoo::makeSpace(ull count){
       ndata[i] = std::move(data[i]);
     }
 
-    delete data;
+    delete[] data;
     data = ndata;
 
     return count;

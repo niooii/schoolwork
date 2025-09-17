@@ -1,64 +1,48 @@
 #include "Animal.h"
 #include "AnimalsInZoo.h"
 
+#include <iostream>
+
 int main() {
-   // Test first constructor (species, year)
-   Animal *animal1 = new Animal("African Elephant", 1758);
-   Animal animal2("Giant Panda", 1869);
-   
-   cout << "Animals created with species and discovery year:" << endl;
-   animal1->display();
-   animal2.display();
-   
-   // Test second constructor (species, weight, dangerous)
-   Animal animal3("Bengal Tiger", 220.5f, true);
-   Animal animal4("Red Panda", 4.5f, false);
-   
-   cout << "\nAnimals created with species, weight, and danger status:" << endl;
-   animal3.display();
-   animal4.display();
-   
-   // Test default constructor
-   AnimalsInZoo zoo1;
-   cout << "Default zoo created" << endl;
-   zoo1.show();
-   
-   // Test parameterized constructor
-   AnimalsInZoo zoo2(5);
-   cout << "\nZoo with capacity 5 created" << endl;
-   
-   // Test store method
-   cout << "\nStoring animals in zoo:" << endl;
-   bool stored1 = zoo2.store(*animal1);
-   bool stored2 = zoo2.store(animal2);
-   bool stored3 = zoo2.store(animal3);
-   bool stored4 = zoo2.store(animal4);
-   
-   cout << "Store results: " << stored1 << " " << stored2 << " " << stored3 << " " << stored4 << endl;
-   
-   cout << "\nZoo contents:" << endl;
-   zoo2.show();
-   
-   // Test find method
-   cout << "\nFinding animals:" << endl;
-   Animal found1 = zoo2.find("Giant Panda");
-   Animal found2 = zoo2.find("Nonexistent Animal");
-   cout << "Found Giant Panda:" << endl;
-   found1.display();
-   
-   // Test remove method
-   cout << "\nRemoving Bengal Tiger:" << endl;
-   bool removed = zoo2.remove("Bengal Tiger");
-   cout << "Remove result: " << removed << endl;
-   
-   cout << "\nZoo contents after removal:" << endl;
-   zoo2.show();
-   
-   // Test readSizes method
-   cout << "\nReading zoo sizes:" << endl;
-   unsigned int count, capacity;
-   zoo2.readSizes(count, capacity);
-   cout << "Count: " << count << ", Capacity: " << capacity << endl;
-   
-   delete animal1;
+    Animal a{"Aardvark", 100, false};
+    Animal b{"Bear", 1000, true};
+    Animal c{"Crocodile", 600, true};
+    Animal d{"Deer", 80, false};
+
+    AnimalsInZoo small_zoo;
+    small_zoo.store(a);
+    small_zoo.store(b);
+
+    unsigned int size, capacity;
+    small_zoo.readSizes(size, capacity);
+    cout << "After adding 2 animals, our zoo has " << size << " animals, and can hold " << capacity << " animals total." << endl;
+    small_zoo.show();
+
+    small_zoo.store(c);
+    small_zoo.store(d);
+
+    small_zoo.readSizes(size, capacity);
+    cout << "After adding 2 more animals, our zoo now has " << size << " animals, and can hold " << capacity << " animals total." << endl;
+    small_zoo.show();
+
+    if (Animal bear = small_zoo.find("Bear"); bear.get_name() != "") {
+        cout << "Our zoo contains a bear." << endl;
+    } else {
+        cout << "Our zoo does not contain a bear." << endl;
+    }
+
+    if (small_zoo.remove("Crocodile")) {
+        cout << "Our zoo no longer contains a crocodile." << endl;
+    } else {
+        cout << "Couldn't find a crocodile to remove." << endl;
+    }
+    small_zoo.show();
+
+    small_zoo.store(a);
+    small_zoo.store(b);
+    small_zoo.store(d);
+
+    small_zoo.readSizes(size, capacity);
+    cout << "After adding 3 more animals, our zoo now has " << size << " animals, and can hold " << capacity << " animals total." << endl;
+    small_zoo.show();
 }

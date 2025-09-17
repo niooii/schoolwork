@@ -17,7 +17,7 @@ public:
       data = new Animal[capacity];
   }
 
-  ~AnimalsInZoo() { delete data; }
+  ~AnimalsInZoo() { delete[] data; }
 
   void show() const;
 

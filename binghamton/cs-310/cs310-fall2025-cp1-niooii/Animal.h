@@ -18,6 +18,7 @@ public:
   Animal(string speciesName, float weight, bool dangerous);
 
   void display();
+  string get_name();
 
 private:
   string species{};
