@@ -7,6 +7,10 @@ df = pd.read_csv("../benchmark_results.csv")
 df_clean = df[~df['Time_ms'].isin(['FAILED', 'SKIP'])].copy()
 df_clean['Time_ms'] = pd.to_numeric(df_clean['Time_ms'])
 
+all_algorithms = sorted(df_clean['Algorithm'].unique())
+colors = plt.cm.tab20(np.linspace(0, 1, len(all_algorithms)))
+color_map = dict(zip(all_algorithms, colors))
+
 data_types = df_clean['DataType'].unique()
 
 fig, axes = plt.subplots(1, 3, figsize=(20, 6))
@@ -16,9 +20,11 @@ for idx, data_type in enumerate(data_types):
     ax = axes[idx]
     data = df_clean[df_clean['DataType'] == data_type]
 
-    for algo in data['Algorithm'].unique():
+    for algo in all_algorithms:
         algo_data = data[data['Algorithm'] == algo]
-        ax.plot(algo_data['Size'], algo_data['Time_ms'], marker='o', label=algo, alpha=0.7)
+        if len(algo_data) > 0:
+            ax.plot(algo_data['Size'], algo_data['Time_ms'], marker='o', label=algo,
+                   color=color_map[algo], alpha=0.7)
 
     ax.set_xlabel('Array Size')
     ax.set_ylabel('Time (ms)')
