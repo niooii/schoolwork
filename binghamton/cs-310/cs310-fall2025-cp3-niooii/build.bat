@@ -4,7 +4,7 @@ clang++ -std=c++17 -O3 -ffast-math -DNDEBUG -pthread benchmark.cpp -o benchmark.
 if %errorlevel% equ 0 (
     echo Build successful!
     echo Running benchmark...
-    benchmark.exe
+    .\benchmark.exe
 ) else (
     echo Build failed!
 )

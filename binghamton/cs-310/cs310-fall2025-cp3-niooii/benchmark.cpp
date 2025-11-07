@@ -7,6 +7,7 @@
 #include <string>
 #include <algorithm>
 #include <unordered_map>
+#include <fstream>
 #include "sorts.h"
 
 using namespace std;
@@ -23,6 +24,22 @@ private:
         uniform_int_distribution<T> dist(0, 1000000);
         for (int i = 0; i < size; i++) {
             data[i] = dist(rng);
+        }
+        return data;
+    }
+
+    vector<T> generate_sorted_data(int size) {
+        vector<T> data(size);
+        for (int i = 0; i < size; i++) {
+            data[i] = i;
+        }
+        return data;
+    }
+
+    vector<T> generate_reversed_data(int size) {
+        vector<T> data(size);
+        for (int i = 0; i < size; i++) {
+            data[i] = size - i - 1;
         }
         return data;
     }
@@ -81,73 +98,72 @@ public:
             {"Cycle Sort", 10000}
         };
 
-        bool used_complexity_skip = false;
-        bool used_runtime_skip = false;
+        ofstream csv_file("benchmark_results.csv");
+
+        // CSV Header
+        csv_file << "Algorithm,DataType,Size,Time_ms\n";
 
         cout << "\n";
         cout << "+---------------------------------------------------------------+\n";
         cout << "|              SORTING ALGORITHM BENCHMARK RESULTS              |\n";
         cout << "+---------------------------------------------------------------+\n";
         cout << "\n";
-        cout << "Time measurements in milliseconds (ms)\n";
-        cout << "Random integer data, range [0, 1,000,000]\n\n";
+        cout << "Running benchmarks and writing results to benchmark_results.csv\n";
+        cout << "Time measurements in milliseconds (ms)\n\n";
 
-        cout << left << setw(30) << "Algorithm";
-        for (int size : sizes) {
-            cout << right << setw(12) << ("n=" + to_string(size));
-        }
-        cout << "\n";
-        cout << string(30 + 12 * sizes.size(), '-') << "\n";
+        vector<string> data_types = {"sorted", "random", "reversed"};
 
-        for (auto& algo : algorithms) {
-            const string algo_name = algo->name();
-            bool skip_due_to_time = false;
-            cout << left << setw(30) << algo_name;
+        for (const string& data_type : data_types) {
+            cout << "Testing " << data_type << " data...\n";
 
-            for (int size : sizes) {
-                if (auto cap_it = manual_caps.find(algo_name); cap_it != manual_caps.end() && size > cap_it->second) {
-                    cout << right << setw(12) << "SKIP";
-                    used_complexity_skip = true;
-                    continue;
-                }
+            for (auto& algo : algorithms) {
+                const string algo_name = algo->name();
+                bool skip_due_to_time = false;
 
-                if (skip_due_to_time) {
-                    cout << right << setw(12) << "SKIP";
-                    used_runtime_skip = true;
-                    continue;
-                }
+                for (int size : sizes) {
+                    if (auto cap_it = manual_caps.find(algo_name); cap_it != manual_caps.end() && size > cap_it->second) {
+                        csv_file << algo_name << "," << data_type << "," << size << ",SKIP\n";
+                        continue;
+                    }
 
-                auto data = generate_random_data(size);
-                double time_ms = benchmark_algorithm(algo.get(), data, size);
+                    if (skip_due_to_time) {
+                        csv_file << algo_name << "," << data_type << "," << size << ",SKIP\n";
+                        continue;
+                    }
 
-                if (time_ms < 0) {
-                    cout << right << setw(12) << "FAILED";
-                    skip_due_to_time = true;
-                    used_runtime_skip = true;
-                    continue;
-                }
+                    vector<T> data;
+                    if (data_type == "sorted") {
+                        data = generate_sorted_data(size);
+                    } else if (data_type == "random") {
+                        data = generate_random_data(size);
+                    } else if (data_type == "reversed") {
+                        data = generate_reversed_data(size);
+                    }
 
-                if (time_ms < 1.0) {
-                    cout << right << setw(10) << fixed << setprecision(3) << time_ms << " ms";
-                } else {
-                    cout << right << setw(10) << fixed << setprecision(2) << time_ms << " ms";
-                }
+                    cout << "  " << algo_name << " (n=" << size << ")... " << flush;
+                    double time_ms = benchmark_algorithm(algo.get(), data, size);
+                    cout << time_ms << " ms\n";
 
-                if (time_ms > max_time_ms && size != sizes.back()) {
-                    skip_due_to_time = true;
-                    used_runtime_skip = true;
+                    if (time_ms < 0) {
+                        csv_file << algo_name << "," << data_type << "," << size << ",FAILED\n";
+                        skip_due_to_time = true;
+                        continue;
+                    }
+
+                    csv_file << algo_name << "," << data_type << "," << size << "," << fixed << setprecision(6) << time_ms << "\n";
+
+                    if (time_ms > max_time_ms && size != sizes.back()) {
+                        skip_due_to_time = true;
+                    }
                 }
             }
-            cout << "\n";
         }
 
-        cout << "\n";
-        if (used_complexity_skip) {
-            cout << "SKIP: Omitted sizes would require super-linear work (e.g., Cycle Sort is O(n^2)).\n";
-        }
-        if (used_runtime_skip) {
-            cout << "SKIP after value: Remaining sizes dropped once a run exceeded " << max_time_ms << " ms or failed verification.\n";
-        }
+        csv_file.close();
+
+        cout << "\nCSV file 'benchmark_results.csv' created successfully.\n";
+        cout << "The file contains benchmark results for sorted, random, and reversed data.\n";
+        cout << "You can now plot these results using matplotlib in Python.\n\n";
 
         cout << "\n+---------------------------------------------------------------+\n";
         cout << "|                        BENCHMARK COMPLETE                     |\n";

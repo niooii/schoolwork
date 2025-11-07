@@ -159,8 +159,31 @@ template<typename T>
 void DualPivotQuickSort<T>::dual_pivot_quicksort(std::vector<T>& arr, int left, int right) {
     if (right - left < 1) return;
 
-    if (arr[left] > arr[right])
-        std::swap(arr[left], arr[right]);
+    if (right - left < 27) {
+        for (int i = left + 1; i <= right; i++) {
+            T temp = arr[i];
+            int j = i - 1;
+            while (j >= left && arr[j] > temp) {
+                arr[j + 1] = arr[j];
+                j--;
+            }
+            arr[j + 1] = temp;
+        }
+        return;
+    }
+
+    int third = (right - left) / 3;
+    int mid1 = left + third;
+    int mid2 = right - third;
+
+    if (arr[mid1] > arr[mid2]) std::swap(arr[mid1], arr[mid2]);
+    if (arr[mid1] > arr[right]) std::swap(arr[mid1], arr[right]);
+    if (arr[left] > arr[mid2]) std::swap(arr[left], arr[mid2]);
+    if (arr[mid2] > arr[right]) std::swap(arr[mid2], arr[right]);
+    if (arr[left] > arr[mid1]) std::swap(arr[left], arr[mid1]);
+
+    std::swap(arr[left], arr[mid1]);
+    std::swap(arr[right], arr[mid2]);
 
     T p = arr[left];
     T q = arr[right];

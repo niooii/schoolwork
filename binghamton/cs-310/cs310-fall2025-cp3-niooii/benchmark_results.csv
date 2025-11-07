@@ -1,0 +1,325 @@
+Algorithm,DataType,Size,Time_ms
+Introsort,sorted,10,0.000300
+Introsort,sorted,100,0.003600
+Introsort,sorted,1000,0.046000
+Introsort,sorted,10000,0.506000
+Introsort,sorted,100000,5.587500
+Introsort,sorted,1000000,73.572700
+Timsort,sorted,10,0.000200
+Timsort,sorted,100,0.002000
+Timsort,sorted,1000,0.053700
+Timsort,sorted,10000,0.249800
+Timsort,sorted,100000,2.432900
+Timsort,sorted,1000000,29.362100
+Dual-Pivot Quicksort,sorted,10,0.000400
+Dual-Pivot Quicksort,sorted,100,0.000700
+Dual-Pivot Quicksort,sorted,1000,0.003000
+Dual-Pivot Quicksort,sorted,10000,0.032300
+Dual-Pivot Quicksort,sorted,100000,0.377500
+Dual-Pivot Quicksort,sorted,1000000,4.628900
+pdqsort,sorted,10,0.000400
+pdqsort,sorted,100,0.000500
+pdqsort,sorted,1000,0.001200
+pdqsort,sorted,10000,0.008800
+pdqsort,sorted,100000,0.084300
+pdqsort,sorted,1000000,1.097600
+Block Sort,sorted,10,0.003200
+Block Sort,sorted,100,0.042500
+Block Sort,sorted,1000,0.046500
+Block Sort,sorted,10000,0.558100
+Block Sort,sorted,100000,6.010700
+Block Sort,sorted,1000000,72.355200
+Smoothsort,sorted,10,0.000100
+Smoothsort,sorted,100,0.001000
+Smoothsort,sorted,1000,0.002100
+Smoothsort,sorted,10000,0.030600
+Smoothsort,sorted,100000,0.368700
+Smoothsort,sorted,1000000,4.555500
+Spreadsort,sorted,10,0.000000
+Spreadsort,sorted,100,0.000300
+Spreadsort,sorted,1000,0.133100
+Spreadsort,sorted,10000,0.152200
+Spreadsort,sorted,100000,0.747100
+Spreadsort,sorted,1000000,8.303400
+Flashsort,sorted,10,0.003800
+Flashsort,sorted,100,0.001500
+Flashsort,sorted,1000,0.013800
+Flashsort,sorted,10000,0.073900
+Flashsort,sorted,100000,0.464600
+Flashsort,sorted,1000000,4.610000
+Library Sort,sorted,10,0.002800
+Library Sort,sorted,100,0.016500
+Library Sort,sorted,1000,1.397000
+Library Sort,sorted,10000,152.144700
+Library Sort,sorted,100000,14554.748400
+Library Sort,sorted,1000000,SKIP
+Radix Sort (LSD),sorted,10,0.000900
+Radix Sort (LSD),sorted,100,0.001200
+Radix Sort (LSD),sorted,1000,0.010400
+Radix Sort (LSD),sorted,10000,0.239400
+Radix Sort (LSD),sorted,100000,1.511600
+Radix Sort (LSD),sorted,1000000,23.669600
+Radix Sort (MSD),sorted,10,0.010200
+Radix Sort (MSD),sorted,100,0.017800
+Radix Sort (MSD),sorted,1000,0.250800
+Radix Sort (MSD),sorted,10000,1.600900
+Radix Sort (MSD),sorted,100000,16.632300
+Radix Sort (MSD),sorted,1000000,188.291500
+Counting Sort,sorted,10,0.002100
+Counting Sort,sorted,100,0.000800
+Counting Sort,sorted,1000,0.002100
+Counting Sort,sorted,10000,0.108400
+Counting Sort,sorted,100000,0.456500
+Counting Sort,sorted,1000000,3.828400
+Parallel Merge Sort,sorted,10,0.004300
+Parallel Merge Sort,sorted,100,0.009300
+Parallel Merge Sort,sorted,1000,0.083500
+Parallel Merge Sort,sorted,10000,0.695100
+Parallel Merge Sort,sorted,100000,2.557600
+Parallel Merge Sort,sorted,1000000,21.966800
+Bitonic Sort,sorted,10,0.001200
+Bitonic Sort,sorted,100,0.005900
+Bitonic Sort,sorted,1000,0.037800
+Bitonic Sort,sorted,10000,0.890200
+Bitonic Sort,sorted,100000,10.170500
+Bitonic Sort,sorted,1000000,96.178100
+Cycle Sort,sorted,10,0.000200
+Cycle Sort,sorted,100,0.001300
+Cycle Sort,sorted,1000,0.036200
+Cycle Sort,sorted,10000,2.779900
+Cycle Sort,sorted,100000,SKIP
+Cycle Sort,sorted,1000000,SKIP
+Shell Sort,sorted,10,0.000100
+Shell Sort,sorted,100,0.000400
+Shell Sort,sorted,1000,0.004400
+Shell Sort,sorted,10000,0.062400
+Shell Sort,sorted,100000,0.800600
+Shell Sort,sorted,1000000,10.260300
+Natural Merge Sort,sorted,10,0.000100
+Natural Merge Sort,sorted,100,0.000100
+Natural Merge Sort,sorted,1000,0.000400
+Natural Merge Sort,sorted,10000,0.003000
+Natural Merge Sort,sorted,100000,0.027700
+Natural Merge Sort,sorted,1000000,0.381600
+Patience Sort,sorted,10,0.016500
+Patience Sort,sorted,100,0.019000
+Patience Sort,sorted,1000,0.123400
+Patience Sort,sorted,10000,1.165100
+Patience Sort,sorted,100000,12.556100
+Patience Sort,sorted,1000000,117.061800
+Introsort,random,10,0.000300
+Introsort,random,100,0.002200
+Introsort,random,1000,0.028900
+Introsort,random,10000,0.513900
+Introsort,random,100000,4.927000
+Introsort,random,1000000,55.714200
+Timsort,random,10,0.000200
+Timsort,random,100,0.005100
+Timsort,random,1000,0.029800
+Timsort,random,10000,0.351700
+Timsort,random,100000,4.146700
+Timsort,random,1000000,53.724200
+Dual-Pivot Quicksort,random,10,0.000200
+Dual-Pivot Quicksort,random,100,FAILED
+Dual-Pivot Quicksort,random,1000,SKIP
+Dual-Pivot Quicksort,random,10000,SKIP
+Dual-Pivot Quicksort,random,100000,SKIP
+Dual-Pivot Quicksort,random,1000000,SKIP
+pdqsort,random,10,0.000400
+pdqsort,random,100,0.002500
+pdqsort,random,1000,0.033200
+pdqsort,random,10000,0.447400
+pdqsort,random,100000,5.474300
+pdqsort,random,1000000,62.329900
+Block Sort,random,10,0.002700
+Block Sort,random,100,0.018700
+Block Sort,random,1000,0.110700
+Block Sort,random,10000,1.204400
+Block Sort,random,100000,8.052200
+Block Sort,random,1000000,97.372000
+Smoothsort,random,10,0.000200
+Smoothsort,random,100,0.002300
+Smoothsort,random,1000,0.028200
+Smoothsort,random,10000,0.368700
+Smoothsort,random,100000,4.667600
+Smoothsort,random,1000000,63.104300
+Spreadsort,random,10,0.000300
+Spreadsort,random,100,0.002400
+Spreadsort,random,1000,0.102600
+Spreadsort,random,10000,0.424700
+Spreadsort,random,100000,3.890100
+Spreadsort,random,1000000,39.666800
+Flashsort,random,10,0.001400
+Flashsort,random,100,0.003100
+Flashsort,random,1000,0.009100
+Flashsort,random,10000,0.079800
+Flashsort,random,100000,0.913400
+Flashsort,random,1000000,12.107400
+Library Sort,random,10,0.006000
+Library Sort,random,100,0.050800
+Library Sort,random,1000,2.157200
+Library Sort,random,10000,178.426800
+Library Sort,random,100000,18576.919800
+Library Sort,random,1000000,SKIP
+Radix Sort (LSD),random,10,0.001100
+Radix Sort (LSD),random,100,0.002100
+Radix Sort (LSD),random,1000,0.019300
+Radix Sort (LSD),random,10000,0.179300
+Radix Sort (LSD),random,100000,2.415000
+Radix Sort (LSD),random,1000000,23.865000
+Radix Sort (MSD),random,10,0.004500
+Radix Sort (MSD),random,100,0.017900
+Radix Sort (MSD),random,1000,0.177800
+Radix Sort (MSD),random,10000,1.499900
+Radix Sort (MSD),random,100000,13.735400
+Radix Sort (MSD),random,1000000,122.351200
+Counting Sort,random,10,1.302400
+Counting Sort,random,100,1.325700
+Counting Sort,random,1000,1.510000
+Counting Sort,random,10000,2.550300
+Counting Sort,random,100000,2.904500
+Counting Sort,random,1000000,11.373800
+Parallel Merge Sort,random,10,0.005400
+Parallel Merge Sort,random,100,0.012500
+Parallel Merge Sort,random,1000,0.079600
+Parallel Merge Sort,random,10000,0.338700
+Parallel Merge Sort,random,100000,2.328400
+Parallel Merge Sort,random,1000000,19.666300
+Bitonic Sort,random,10,0.001700
+Bitonic Sort,random,100,0.014600
+Bitonic Sort,random,1000,0.144300
+Bitonic Sort,random,10000,2.349700
+Bitonic Sort,random,100000,17.830700
+Bitonic Sort,random,1000000,191.796800
+Cycle Sort,random,10,0.000300
+Cycle Sort,random,100,0.002300
+Cycle Sort,random,1000,0.087100
+Cycle Sort,random,10000,7.296000
+Cycle Sort,random,100000,SKIP
+Cycle Sort,random,1000000,SKIP
+Shell Sort,random,10,0.000200
+Shell Sort,random,100,0.003000
+Shell Sort,random,1000,0.046400
+Shell Sort,random,10000,0.641800
+Shell Sort,random,100000,8.691600
+Shell Sort,random,1000000,122.429800
+Natural Merge Sort,random,10,0.001400
+Natural Merge Sort,random,100,0.014000
+Natural Merge Sort,random,1000,0.065700
+Natural Merge Sort,random,10000,0.621800
+Natural Merge Sort,random,100000,7.413000
+Natural Merge Sort,random,1000000,79.518700
+Patience Sort,random,10,0.002400
+Patience Sort,random,100,0.013400
+Patience Sort,random,1000,0.083300
+Patience Sort,random,10000,0.835700
+Patience Sort,random,100000,8.369700
+Patience Sort,random,1000000,107.577600
+Introsort,reversed,10,0.000800
+Introsort,reversed,100,0.004800
+Introsort,reversed,1000,0.063300
+Introsort,reversed,10000,0.804000
+Introsort,reversed,100000,8.130600
+Introsort,reversed,1000000,68.837100
+Timsort,reversed,10,0.000200
+Timsort,reversed,100,0.003700
+Timsort,reversed,1000,0.025600
+Timsort,reversed,10000,0.197100
+Timsort,reversed,100000,2.388500
+Timsort,reversed,1000000,36.199000
+Dual-Pivot Quicksort,reversed,10,0.000300
+Dual-Pivot Quicksort,reversed,100,FAILED
+Dual-Pivot Quicksort,reversed,1000,SKIP
+Dual-Pivot Quicksort,reversed,10000,SKIP
+Dual-Pivot Quicksort,reversed,100000,SKIP
+Dual-Pivot Quicksort,reversed,1000000,SKIP
+pdpdqsort,reversed,10,0.000400
+pdqsort,reversed,100,0.001800
+pdqsort,reversed,1000,0.010900
+pdqsort,reversed,10000,0.124400
+pdqsort,reversed,100000,1.627300
+pdqsort,reversed,1000000,19.266100
+Block Sort,reversed,10,0.007700
+Block Sort,reversed,100,0.048300
+Block Sort,reversed,1000,0.283100
+Block Sort,reversed,10000,3.798300
+Block Sort,reversed,100000,48.000000
+Block Sort,reversed,1000000,314.151400
+Smoothsort,reversed,10,0.000300
+Smoothsort,reversed,100,0.001500
+Smoothsort,reversed,1000,0.010800
+Smoothsort,reversed,10000,0.101200
+Smoothsort,reversed,100000,0.496000
+Smoothsort,reversed,1000000,6.041400
+Spreadsort,reversed,10,0.000200
+Spreadsort,reversed,100,0.001200
+Spreadsort,reversed,1000,0.100100
+Spreadsort,reversed,10000,0.347200
+Spreadsort,reversed,100000,0.879100
+Spreadsort,reversed,1000000,9.001200
+Flashsort,reversed,10,0.003700
+Flashsort,reversed,100,0.001700
+Flashsort,reversed,1000,0.005300
+Flashsort,reversed,10000,0.048300
+Flashsort,reversed,100000,0.591100
+Flashsort,reversed,1000000,4.462500
+Library Sort,reversed,10,0.013200
+Library Sort,reversed,100,0.187800
+Library Sort,reversed,1000,7.172500
+Library Sort,reversed,10000,599.533300
+Library Sort,reversed,100000,65011.237200
+Library Sort,reversed,1000000,SKIP
+Radix Sort (LSD),reversed,10,0.000900
+Radix Sort (LSD),reversed,100,0.001300
+Radix Sort (LSD),reversed,1000,0.010000
+Radix Sort (LSD),reversed,10000,0.136500
+Radix Sort (LSD),reversed,100000,1.696300
+Radix Sort (LSD),reversed,1000000,33.523900
+Radix Sort (MSD),reversed,10,0.006200
+Radix Sort (MSD),reversed,100,0.028000
+Radix Sort (MSD),reversed,1000,0.212700
+Radix Sort (MSD),reversed,10000,2.749900
+Radix Sort (MSD),reversed,100000,19.608400
+Radix Sort (MSD),reversed,1000000,180.423400
+Counting Sort,reversed,10,0.001100
+Counting Sort,reversed,100,0.001100
+Counting Sort,reversed,1000,0.004600
+Counting Sort,reversed,10000,0.042200
+Counting Sort,reversed,100000,0.412300
+Counting Sort,reversed,1000000,3.808000
+Parallel Merge Sort,reversed,10,0.010000
+Parallel Merge Sort,reversed,100,0.049500
+Parallel Merge Sort,reversed,1000,0.268500
+Parallel Merge Sort,reversed,10000,0.394600
+Parallel Merge Sort,reversed,100000,1.466800
+Parallel Merge Sort,reversed,1000000,15.883900
+Bitonic Sort,reversed,10,0.001300
+Bitonic Sort,reversed,100,0.006800
+Bitonic Sort,reversed,1000,0.037600
+Bitonic Sort,reversed,10000,0.906500
+Bitonic Sort,reversed,100000,9.329600
+Bitonic Sort,reversed,1000000,99.738300
+Cycle Sort,reversed,10,0.000700
+Cycle Sort,reversed,100,0.002100
+Cycle Sort,reversed,1000,0.059000
+Cycle Sort,reversed,10000,4.554700
+Cycle Sort,reversed,100000,SKIP
+Cycle Sort,reversed,1000000,SKIP
+Shell Sort,reversed,10,0.000400
+Shell Sort,reversed,100,0.002100
+Shell Sort,reversed,1000,0.007600
+Shell Sort,reversed,10000,0.095700
+Shell Sort,reversed,100000,1.153600
+Shell Sort,reversed,1000000,17.031300
+Natural Merge Sort,reversed,10,0.001900
+Natural Merge Sort,reversed,100,0.009200
+Natural Merge Sort,reversed,1000,0.111600
+Natural Merge Sort,reversed,10000,0.541900
+Natural Merge Sort,reversed,100000,7.128400
+Natural Merge Sort,reversed,1000000,65.823900
+Patience Sort,reversed,10,0.002000
+Patience Sort,reversed,100,0.009400
+Patience Sort,reversed,1000,0.018200
+Patience Sort,reversed,10000,0.137000
+Patience Sort,reversed,100000,1.016000
+Patience Sort,reversed,1000000,9.972200
